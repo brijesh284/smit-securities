@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Setup -->
+    <title>About SMIT Securities | Trusted Financial Services in Rajkot &amp; Gondal</title>
+    <meta name="description"
+        content="Learn about SMIT Securities, a relationship-driven financial services firm serving investors and businesses in Rajkot and Gondal with equity and investment solutions.">
+    <meta name="keywords"
+        content="about SMIT Securities, financial services Rajkot, stock broker Gondal, investment company Rajkot, equity services Rajkot">
+    <meta name="author" content="Smit Securities">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ===================================================
+     MOBILE MENU OVERLAY
+=================================================== -->
+    <div class="mob-menu" id="mobMenu" role="navigation" aria-label="Mobile navigation">
+        <button class="mob-close" onclick="closeMob()" aria-label="Close menu">✕</button>
+        <a href="index.html" onclick="closeMob()">Home</a>
+        <a href="about.html" class="active-link" onclick="closeMob()">About Us</a>
+        <a href="service.html" onclick="closeMob()">Service</a>
+        <a href="insights.html" onclick="closeMob()">Insights</a>
+        <a href="contact.html" onclick="closeMob()">Contact Us</a>
+        <a href="contact.html" class="btn btn-primary btn-md" style="margin-top:10px" onclick="closeMob()">Open Account
+            →</a>
+    </div>
+
+    <!-- ===================================================
+     NAVBAR
+=================================================== -->
+    <nav id="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-wrap">
+
+                <!-- Logo -->
+                <a href="index.html" class="nav-logo" aria-label="Smit Securities Home">
+                    <svg class="nav-logo-icon" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <rect width="46" height="46" rx="11" fill="#07111F" />
+                        <path
+                            d="M29 13C29 13 15 13 15 19.5C15 23.5 21 24.5 25 25.5C29 26.5 33 28.5 33 33C33 39 17 39 17 39"
+                            stroke="url(#ng1)" stroke-width="3.2" stroke-linecap="round" fill="none" />
+                        <rect x="24.5" y="8" width="2" height="8" rx="1" fill="url(#ng1)" />
+                        <rect x="28.2" y="10.5" width="2" height="5.5" rx="1" fill="url(#ng1)" />
+                        <rect x="31.9" y="8.5" width="2" height="7.5" rx="1" fill="url(#ng1)" />
+                        <defs>
+                            <linearGradient id="ng1" x1="15" y1="13" x2="33" y2="39" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7EC8F0" />
+                                <stop offset="1" stop-color="#2563C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="nav-logo-text">
+                        <span class="nav-logo-name">SMIT SECURITIES</span>
+                        <span class="nav-logo-sub">Invest · Grow · Prosper</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active-link">About Us</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+
+                <!-- Desktop CTA Buttons -->
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-outline btn-sm">Login</a>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Open Account →</a>
+                </div>
+
+                <!-- Hamburger (Mobile) -->
+                <div class="hamburger" onclick="openMob()" aria-label="Open menu" role="button" tabindex="0">
+                    <span></span><span></span><span></span>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================================================
+     LIVE MARKET TICKER
+=================================================== -->
+    <div class="ticker" aria-label="Live market data">
+        <div class="ticker-inner" id="tickerInner">
+            <div class="t-item"><span class="t-name">NIFTY 50</span> <span class="t-price">22,512.35</span> <span
+                    class="up">▲ +1.32%</span></div>
+            <div class="t-item"><span class="t-name">SENSEX</span> <span class="t-price">74,119.80</span> <span
+                    class="up">▲ +0.91%</span></div>
+            <div class="t-item"><span class="t-name">BANK NIFTY</span> <span class="t-price">48,220.15</span> <span
+                    class="up">▲ +1.54%</span></div>
+            <div class="t-item"><span class="t-name">RELIANCE</span> <span class="t-price">₹2,940.00</span> <span
+                    class="up">▲ +2.10%</span></div>
+            <div class="t-item"><span class="t-name">HDFC BANK</span> <span class="t-price">₹1,530.50</span> <span
+                    class="down">▼ -0.45%</span></div>
+            <div class="t-item"><span class="t-name">TCS</span> <span class="t-price">₹3,890.00</span> <span
+                    class="up">▲ +0.75%</span></div>
+            <!-- Duplicate for infinite seamless marquee -->
+            <div class="t-item"><span class="t-name">NIFTY 50</span> <span class="t-price">22,512.35</span> <span
+                    class="up">▲ +1.32%</span></div>
+            <div class="t-item"><span class="t-name">SENSEX</span> <span class="t-price">74,119.80</span> <span
+                    class="up">▲ +0.91%</span></div>
+            <div class="t-item"><span class="t-name">BANK NIFTY</span> <span class="t-price">48,220.15</span> <span
+                    class="up">▲ +1.54%</span></div>
+            <div class="t-item"><span class="t-name">RELIANCE</span> <span class="t-price">₹2,940.00</span> <span
+                    class="up">▲ +2.10%</span></div>
+            <div class="t-item"><span class="t-name">HDFC BANK</span> <span class="t-price">₹1,530.50</span> <span
+                    class="down">▼ -0.45%</span></div>
+            <div class="t-item"><span class="t-name">TCS</span> <span class="t-price">₹3,890.00</span> <span
+                    class="up">▲ +0.75%</span></div>
+        </div>
+    </div>
+
+    <!-- ===================================================
+     1. HERO SECTION (ABOUT SMIT SECURITIES)
+=================================================== -->
+    <section class="new-hero-section">
+        <div class="container">
+            <div class="new-hiro-inner">
+                <div class="hero-badge reveal">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-txt">🏛️ ABOUT SMIT SECURITIES</span>
+                </div>
+
+                <h1 class="hero-h1">
+                    <span class="line"><span>FINANCIAL RELATIONSHIPS</span></span>
+                    <span class="line"><span><span class="gradient-text">BUILT FOR THE LONG TERM.</span></span></span>
+                </h1>
+
+                <p class="hero-sub reveal d2">
+                    SMIT Securities is a relationship-focused financial services firm helping investors, entrepreneurs
+                    and businesses navigate opportunities across equity markets, investments and strategic financial
+                    solutions.
+                </p>
+
+                <div class="trust-strip reveal d4">
+                    <span class="trust-lbl">Regional Excellence:</span>
+                    <div class="trust-chip">📍 Rajkot Financial Desk</div>
+                    <div class="trust-chip">📍 Gondal Business Hub</div>
+                    <div class="trust-chip">🏛️ SEBI Regulated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="story-mission-section">
+
+        <!-- ===================================================
+            2. OUR STORY SECTION
+        =================================================== -->
+        <section class="about-story-section">
+            <div class="container">
+                <div class="about-story-grid">
+                    <!-- Left: Story Editorial Copy -->
+                    <div class="about-story-content reveal">
+                        <div class="section-tag">OUR STORY</div>
+                        <h2 class="story-lead-h">FROM FINANCIAL TRANSACTIONS TO <span class="gradient-text">FINANCIAL
+                                RELATIONSHIPS.</span></h2>
+
+                        <div class="story-paras">
+                            <p>The financial world often focuses on numbers. <strong>We focus on the people behind
+                                    them.</strong></p>
+                            <p>Every investor has different objectives. Every entrepreneur has a different ambition.
+                                Every
+                                business has a different growth story.</p>
+                            <p>Our role is to understand that difference and create a tailored financial conversation
+                                around
+                                it.</p>
+                            <p>We believe a financial relationship should not end after a transaction. It should become
+                                stronger with every interaction.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: High-Impact Philosophy Card -->
+                    <div class="story-quote-card reveal d2">
+                        <div class="story-quote-text">
+                            "Because wealth is personal. Trust is even more personal."
+                        </div>
+                        <div class="story-quote-sub">
+                            — The Smit Securities Fiduciary Promise
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+            3. VISION & MISSION SECTION
+        =================================================== -->
+        <section class="vision-mission-section">
+            <div class="container">
+                <div class="vm-grid">
+
+                    <!-- Vision Card -->
+                    <div class="vm-card reveal d1">
+                        <div class="vm-icon-wrap">👁️</div>
+                        <div class="section-tag" style="margin-bottom: 8px;">OUR VISION</div>
+                        <h3>A TRUSTED FINANCIAL PARTNER FOR EVERY STAGE OF GROWTH.</h3>
+                        <p>To become a trusted financial partner for individuals, investors and businesses seeking
+                            greater
+                            clarity, meaningful opportunities and long-term financial growth.</p>
+                    </div>
+
+                    <!-- Mission Card -->
+                    <div class="vm-card reveal d2">
+                        <div class="vm-icon-wrap">🎯</div>
+                        <div class="section-tag" style="margin-bottom: 8px;">OUR MISSION</div>
+                        <h3>MAKING FINANCIAL DECISIONS MORE INFORMED.</h3>
+                        <p>Our mission is to make financial opportunities more understandable and relationship-driven
+                            while
+                            helping clients approach investment and financial decisions with greater awareness and
+                            confidence.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="values-gt-section">
+        <!-- ===================================================
+        4. OUR VALUES SECTION (WHAT GUIDES US)
+    =================================================== -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-head head-title-values reveal">
+                    <div class="section-tag" style="justify-content: center">OUR VALUES</div>
+                    <h2>WHAT <span class="gradient-text">GUIDES US.</span></h2>
+                    <p>Five non-negotiable principles that shape every recommendation, conversation, and relationship we
+                        build.</p>
+                </div>
+
+                <div class="values-grid">
+                    <!-- 01: Trust -->
+                    <div class="value-card reveal d1">
+                        <div class="val-num">01</div>
+                        <div class="val-title">TRUST</div>
+                        <div class="val-desc">Earned through every interaction, consistency, and steadfast commitment to
+                            our
+                            clients' best interests.</div>
+                    </div>
+
+                    <!-- 02: Transparency -->
+                    <div class="value-card reveal d2">
+                        <div class="val-num">02</div>
+                        <div class="val-title">TRANSPARENCY</div>
+                        <div class="val-desc">Clear, honest communication without hidden jargon or unnecessary
+                            complexity.
+                        </div>
+                    </div>
+
+                    <!-- 03: Discipline -->
+                    <div class="value-card reveal d3">
+                        <div class="val-num">03</div>
+                        <div class="val-title">DISCIPLINE</div>
+                        <div class="val-desc">Thoughtful decisions grounded in robust research over emotional, impulsive
+                            market reactions.</div>
+                    </div>
+
+                    <!-- 04: Integrity -->
+                    <div class="value-card reveal d1">
+                        <div class="val-num">04</div>
+                        <div class="val-title">INTEGRITY</div>
+                        <div class="val-desc">Doing what is right for the long-term relationship, even when no one is
+                            watching.</div>
+                    </div>
+
+                    <!-- 05: Long-Term Thinking -->
+                    <div class="value-card reveal d2" style="grid-column: span 2;">
+                        <div class="val-num">05</div>
+                        <div class="val-title">LONG-TERM THINKING</div>
+                        <div class="val-desc">Building resilient relationships and multi-decade financial perspectives
+                            that
+                            endure far beyond today's market cycles.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+        5. GENERATIONAL TRUST SECTION
+    =================================================== -->
+        <section class="gt" id="generational-trust">
+            <div class="container">
+                <div class="gt-wrap">
+                    <!-- Visual / Badges -->
+                    <div class="gt-visual reveal">
+                        <div class="gt-photo">
+                            <img src="img/generational-trust.png" alt="Generational Trust at Smit Securities"
+                                loading="lazy">
+                        </div>
+                        <div class="gt-badges">
+                            <div class="gt-badge">
+                                <span class="gt-badge-check"><svg viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                                    </svg></span>
+                                <span>Multi-Generational Wealth Creation</span>
+                            </div>
+                            <div class="gt-badge">
+                                <span class="gt-badge-check"><svg viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                                    </svg></span>
+                                <span>Fiduciary Stewardship &amp; Advisory</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="gt-content reveal d2">
+                        <div class="gt-tag">GENERATIONAL TRUST</div>
+                        <h2>A RELATIONSHIP THAT CAN <span class="gradient-text">GROW WITH YOU.</span></h2>
+
+                        <p class="gt-body">We believe a financial institution should not simply help you with today's
+                            decision. It should understand where you want to go next.</p>
+
+                        <div class="gt-evolve">
+                            <span>An investment journey may begin with equity</span>
+                            <span>A business relationship may begin with a conversation</span>
+                            <span>A fund-raising requirement may become the next stage of growth</span>
+                            <span class="gt-final">And over time, those relationships become something much more
+                                valuable:</span>
+                        </div>
+
+                        <div class="gt-close">
+                            <div class="gt-close-1">The greatest measure of our partnership:</div>
+                            <div class="gt-close-2">Generational Trust.</div>
+                            <p class="gt-body" style="margin-top: 10px;">Our goal is to create relationships that
+                                clients
+                                can confidently carry forward as their financial needs evolve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- ===================================================
+     6. BNI COMMUNITY & REGIONAL SECTION
+=================================================== -->
+    <section class="bni-section">
+        <div class="container">
+            <div class="bni-wrap">
+                <!-- Left: Content -->
+                <div class="bni-content reveal">
+                    <div class="bni-partner-badge">🤝 SMIT Securities × BNI</div>
+                    <h2 class="story-lead-h">BUILDING RELATIONSHIPS <span class="gradient-text">BEYOND FINANCE.</span>
+                    </h2>
+
+                    <p class="story-paras" style="margin-bottom: 20px;">
+                        SMIT Securities is proud to be a <strong>BNI member</strong>, connecting with entrepreneurs,
+                        professionals, and business owners in the <strong>Gondal and Rajkot</strong> business community.
+                    </p>
+
+                    <p class="story-paras">
+                        BNI gives us the unique opportunity to understand businesses beyond their balance sheets and
+                        financial numbers:
+                    </p>
+                </div>
+
+                <!-- Right: Showcase Card -->
+                <div class="bni-card-showcase reveal d2">
+                    <div class="bni-card-h">Connecting With The Local Business Community</div>
+                    <ul class="bni-list">
+                        <li class="bni-item"><span class="bni-item-dot"></span><span>We learn about their
+                                challenges</span></li>
+                        <li class="bni-item"><span class="bni-item-dot"></span><span>We understand their
+                                ambitions</span></li>
+                        <li class="bni-item"><span class="bni-item-dot"></span><span>We build enduring
+                                relationships</span></li>
+                        <li class="bni-item"><span class="bni-item-dot"></span><span>We create meaningful financial
+                                conversations around growth, investment and capital</span></li>
+                    </ul>
+
+                    <div class="bni-quote-footer">
+                        "We believe business is built on relationships.<br>And relationships are built on trust."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================
+     7. ABOUT CTA & FOOTER SECTION
+=================================================== -->
+    <section class="cta-footer-section">
+        <!-- ABOUT CTA -->
+        <section class="cta" id="cta">
+            <div class="cta-glow" aria-hidden="true"></div>
+            <div class="rings" aria-hidden="true">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+                <div class="ring ring-4"></div>
+            </div>
+            <div class="container">
+                <div class="cta-inner">
+                    <div class="section-tag reveal" style="justify-content: center">ABOUT CTA</div>
+                    <h2 class="cta-h2 reveal d1">LET'S BUILD A<br><span class="gradient-text">LONG-TERM
+                            RELATIONSHIP.</span></h2>
+                    <p class="cta-sub reveal d2">Whether you're an investor, entrepreneur or business owner, we're
+                        always open to a meaningful conversation.</p>
+                    <div class="cta-btns reveal d3">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            Talk to Our Team
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="currentColor" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="tel:+919999999999" class="btn btn-ghost btn-lg">📞 Call Us Now</a>
+                    </div>
+                    <div class="cta-trust reveal d4">
+                        <span>✓ Serving Rajkot &amp; Gondal</span>
+                        <span>✓ Relationship-Driven Advisory</span>
+                        <span>✓ SEBI Regulated</span>
+                        <span>✓ Multi-Generational Focus</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             GLOBAL FOOTER
+        =================================================== -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Brand Column -->
+                    <div class="footer-brand">
+                        <a href="index.html" class="nav-logo" aria-label="Smit Securities Home">
+                            <svg class="nav-logo-icon" viewBox="0 0 46 46" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect width="46" height="46" rx="11" fill="#07111F" />
+                                <path
+                                    d="M29 13C29 13 15 13 15 19.5C15 23.5 21 24.5 25 25.5C29 26.5 33 28.5 33 33C33 39 17 39 17 39"
+                                    stroke="url(#fg_ab)" stroke-width="3.2" stroke-linecap="round" fill="none" />
+                                <rect x="24.5" y="8" width="2" height="8" rx="1" fill="url(#fg_ab)" />
+                                <rect x="28.2" y="10.5" width="2" height="5.5" rx="1" fill="url(#fg_ab)" />
+                                <rect x="31.9" y="8.5" width="2" height="7.5" rx="1" fill="url(#fg_ab)" />
+                                <defs>
+                                    <linearGradient id="fg_ab" x1="15" y1="13" x2="33" y2="39"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#7EC8F0" />
+                                        <stop offset="1" stop-color="#2563C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="nav-logo-text">
+                                <span class="nav-logo-name">SMIT SECURITIES</span>
+                                <span class="nav-logo-sub">Invest · Grow · Prosper</span>
+                            </div>
+                        </a>
+
+                        <div class="footer-brand-tagline">Advice That Builds Wealth.</div>
+
+                        <!-- All 12 Services Pipe List -->
+                        <div class="footer-services-inline">
+                            <a href="service.html#featured-equity">Equity</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Derivatives</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Mutual Funds</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Private Equity</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">MCX</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">IPOs</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Bonds</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Debentures</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">ETFs</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">MTF</a><span class="pipe">|</span>
+                            <a href="service.html#specialized-services">Pre-IPO</a><span class="pipe">|</span>
+                            <a href="service.html#specialized-services">Fund Raising</a>
+                        </div>
+
+                        <!-- Regional Hubs -->
+                        <div class="footer-locations-inline">
+                            <span>📍</span>
+                            <a href="contact.html#locations">Gondal</a>
+                            <span style="color: rgba(74, 154, 224, 0.4);">|</span>
+                            <a href="contact.html#locations">Rajkot</a>
+                        </div>
+
+                        <div class="social-row">
+                            <a href="#" class="soc" title="Twitter/X" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="soc" title="LinkedIn" aria-label="LinkedIn">in</a>
+                            <a href="#" class="soc" title="Facebook" aria-label="Facebook">f</a>
+                            <a href="#" class="soc" title="YouTube" aria-label="YouTube">▶</a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Company -->
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">→ Home</a></li>
+                            <li><a href="about.html">→ About Us</a></li>
+                            <li><a href="service.html">→ Services</a></li>
+                            <li><a href="insights.html">→ Insights</a></li>
+                            <li><a href="contact.html">→ Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Services -->
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="service.html#featured-equity">→ Equity</a></li>
+                            <li><a href="service.html#service-grid">→ Derivatives</a></li>
+                            <li><a href="service.html#service-grid">→ Mutual Funds</a></li>
+                            <li><a href="service.html#service-grid">→ Private Equity</a></li>
+                            <li><a href="service.html#service-grid">→ MCX</a></li>
+                            <li><a href="service.html#service-grid">→ IPOs</a></li>
+                            <li><a href="service.html#service-grid">→ Bonds</a></li>
+                            <li><a href="service.html#service-grid">→ Debentures</a></li>
+                            <li><a href="service.html#service-grid">→ ETFs</a></li>
+                            <li><a href="service.html#service-grid">→ MTF</a></li>
+                            <li><a href="service.html#specialized-services">→ Pre-IPO</a></li>
+                            <li><a href="service.html#specialized-services">→ Fund Raising</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Connect -->
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul class="footer-links">
+                            <li><a href="contact.html#locations">📍 Gondal Desk</a></li>
+                            <li><a href="contact.html#locations">📍 Rajkot Desk</a></li>
+                            <li><a href="tel:+91XXXXXXXXXX">📞 +91 XXXXX XXXXX</a></li>
+                            <li><a href="mailto:info@smitsecurities.com">✉ info@smitsecurities.com</a></li>
+                            <li><a href="contact.html#locations">🕐 Mon–Sat: 9 AM – 6 PM</a></li>
+                        </ul>
+                        <div style="margin-top: 18px">
+                            <div class="sebi-chip">🏛️ SEBI Reg: INZ000XXXXXX</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <p>© 2026 Smit Securities. All rights reserved. &nbsp;|&nbsp;
+                        <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+                        <a href="#">Terms of Use</a> &nbsp;|&nbsp;
+                        <a href="#">Disclaimer</a>
+                    </p>
+                    <p>⚠️ Investments are subject to market risks. Please read all scheme-related documents carefully
+                        before investing.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Scroll To Top Floating Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

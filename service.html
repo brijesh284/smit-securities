@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Setup -->
+    <title>Investment &amp; Financial Services | SMIT Securities Rajkot &amp; Gondal</title>
+    <meta name="description"
+        content="Explore SMIT Securities services including equity, derivatives, mutual funds, IPOs, Pre-IPO, private equity, bonds, ETFs, MTF and fund raising.">
+    <meta name="keywords"
+        content="investment services Rajkot, equity trading Rajkot, stock market services, IPO investment, Pre-IPO investment, mutual funds Rajkot, fund raising services">
+    <meta name="author" content="Smit Securities">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Urbanist:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Master CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- ===================================================
+     MOBILE MENU OVERLAY
+=================================================== -->
+    <div class="mob-menu" id="mobMenu" role="navigation" aria-label="Mobile navigation">
+        <button class="mob-close" onclick="closeMob()" aria-label="Close menu">✕</button>
+        <a href="index.html" onclick="closeMob()">Home</a>
+        <a href="about.html" onclick="closeMob()">About Us</a>
+        <a href="service.html" class="active-link" onclick="closeMob()">Service</a>
+        <a href="insights.html" onclick="closeMob()">Insights</a>
+        <a href="contact.html" onclick="closeMob()">Contact Us</a>
+        <a href="contact.html" class="btn btn-primary btn-md" style="margin-top:10px" onclick="closeMob()">Open Account
+            →</a>
+    </div>
+
+    <!-- ===================================================
+     NAVBAR
+=================================================== -->
+    <nav id="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-wrap">
+
+                <!-- Logo -->
+                <a href="index.html" class="nav-logo" aria-label="Smit Securities Home">
+                    <svg class="nav-logo-icon" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <rect width="46" height="46" rx="11" fill="#07111F" />
+                        <path
+                            d="M29 13C29 13 15 13 15 19.5C15 23.5 21 24.5 25 25.5C29 26.5 33 28.5 33 33C33 39 17 39 17 39"
+                            stroke="url(#ng1)" stroke-width="3.2" stroke-linecap="round" fill="none" />
+                        <rect x="24.5" y="8" width="2" height="8" rx="1" fill="url(#ng1)" />
+                        <rect x="28.2" y="10.5" width="2" height="5.5" rx="1" fill="url(#ng1)" />
+                        <rect x="31.9" y="8.5" width="2" height="7.5" rx="1" fill="url(#ng1)" />
+                        <defs>
+                            <linearGradient id="ng1" x1="15" y1="13" x2="33" y2="39" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#7EC8F0" />
+                                <stop offset="1" stop-color="#2563C0" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="nav-logo-text">
+                        <span class="nav-logo-name">SMIT SECURITIES</span>
+                        <span class="nav-logo-sub">Invest · Grow · Prosper</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html" class="active-link">Service</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+
+                <!-- Desktop CTA Buttons -->
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn btn-outline btn-sm">Login</a>
+                    <a href="contact.html" class="btn btn-primary btn-sm">Open Account →</a>
+                </div>
+
+                <!-- Hamburger (Mobile) -->
+                <div class="hamburger" onclick="openMob()" aria-label="Open menu" role="button" tabindex="0">
+                    <span></span><span></span><span></span>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================================================
+     LIVE MARKET TICKER
+=================================================== -->
+    <div class="ticker" aria-label="Live market data">
+        <div class="ticker-inner" id="tickerInner">
+            <div class="t-item"><span class="t-name">NIFTY 50</span> <span class="t-price">22,512.35</span> <span
+                    class="up">▲ +1.32%</span></div>
+            <div class="t-item"><span class="t-name">SENSEX</span> <span class="t-price">74,119.80</span> <span
+                    class="up">▲ +0.91%</span></div>
+            <div class="t-item"><span class="t-name">BANK NIFTY</span> <span class="t-price">48,220.15</span> <span
+                    class="up">▲ +1.54%</span></div>
+            <div class="t-item"><span class="t-name">RELIANCE</span> <span class="t-price">₹2,940.00</span> <span
+                    class="up">▲ +2.10%</span></div>
+            <div class="t-item"><span class="t-name">HDFC BANK</span> <span class="t-price">₹1,530.50</span> <span
+                    class="down">▼ -0.45%</span></div>
+            <div class="t-item"><span class="t-name">TCS</span> <span class="t-price">₹3,890.00</span> <span
+                    class="up">▲ +0.75%</span></div>
+            <!-- Duplicate for infinite seamless marquee -->
+            <div class="t-item"><span class="t-name">NIFTY 50</span> <span class="t-price">22,512.35</span> <span
+                    class="up">▲ +1.32%</span></div>
+            <div class="t-item"><span class="t-name">SENSEX</span> <span class="t-price">74,119.80</span> <span
+                    class="up">▲ +0.91%</span></div>
+            <div class="t-item"><span class="t-name">BANK NIFTY</span> <span class="t-price">48,220.15</span> <span
+                    class="up">▲ +1.54%</span></div>
+            <div class="t-item"><span class="t-name">RELIANCE</span> <span class="t-price">₹2,940.00</span> <span
+                    class="up">▲ +2.10%</span></div>
+            <div class="t-item"><span class="t-name">HDFC BANK</span> <span class="t-price">₹1,530.50</span> <span
+                    class="down">▼ -0.45%</span></div>
+            <div class="t-item"><span class="t-name">TCS</span> <span class="t-price">₹3,890.00</span> <span
+                    class="up">▲ +0.75%</span></div>
+        </div>
+    </div>
+
+    <!-- ===================================================
+     1. HERO SECTION (OUR SERVICES)
+=================================================== -->
+    <section class="new-hero-section">
+        <div class="container">
+            <div class="new-hiro-inner">
+                <div class="hero-badge reveal">
+                    <span class="badge-pulse"></span>
+                    <span class="badge-txt">💼 OUR SERVICES</span>
+                </div>
+
+                <h1 class="hero-h1">
+                    <span class="line"><span>FINANCIAL SOLUTIONS FOR EVERY</span></span>
+                    <span class="line"><span><span class="gradient-text">STAGE OF YOUR JOURNEY.</span></span></span>
+                </h1>
+
+                <p class="hero-sub reveal d2">
+                    From participating in equity markets to exploring strategic business capital, SMIT Securities
+                    provides access to a broad range of financial opportunities.
+                </p>
+
+                <div class="trust-strip reveal d3">
+                    <span class="trust-lbl">Explore Offerings:</span>
+                    <a href="#featured-equity" class="trust-chip">📈 Equity Markets</a>
+                    <a href="#service-grid" class="trust-chip">📊 Core Service Grid (9 Offerings)</a>
+                    <a href="#specialized-services" class="trust-chip">🚀 Specialized Pre-IPO &amp; Capital</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-service-section">
+        <!-- ===================================================
+     2. FEATURED SERVICE: EQUITY (THE CORE OF OUR MARKET SERVICES)
+=================================================== -->
+        <section class="featured-equity-section" id="featured-equity">
+            <div class="container">
+                <div class="featured-equity-grid">
+                    <!-- Left Content -->
+                    <div class="featured-equity-content reveal">
+                        <div class="section-tag">FEATURED SERVICE · EQUITY</div>
+                        <h2 class="story-lead-h">THE CORE OF OUR <span class="gradient-text">MARKET SERVICES.</span>
+                        </h2>
+
+                        <p class="story-paras" style="margin-bottom: 16px;">
+                            Equity is at the heart of SMIT Securities. We provide direct and seamless access to India's
+                            premier exchange platforms:
+                        </p>
+
+                        <!-- Exchange Badges -->
+                        <div class="exchange-badge-group">
+                            <span class="exchange-badge">🏛️ NSE</span>
+                            <span class="exchange-badge">🏛️ BSE</span>
+                            <span class="exchange-badge">🏛️ MSEI</span>
+                        </div>
+
+                        <p class="story-paras">
+                            Our approach focuses on helping investors understand market opportunities, evaluate their
+                            choices, and maintain a disciplined investment perspective.
+                        </p>
+
+                        <!-- Approach Highlight -->
+                        <div class="equity-approach-box">
+                            <div class="equity-approach-title">OUR EQUITY PHILOSOPHY:</div>
+                            <div class="equity-approach-val">Research. Understand. Decide.</div>
+                        </div>
+
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            Talk to Our Equity Team
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="currentColor" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Right Visual: Interactive Live Equity Market Card -->
+                    <div class="eq-visual reveal d2">
+                        <div class="eq-card">
+                            <div class="eq-card-label">
+                                <span class="eq-card-dot"></span>
+                                Live Market Execution Desk
+                            </div>
+                            <div class="eq-card-title">Comprehensive Market Access</div>
+
+                            <div class="sparkline-wrap" style="margin: 10px 0 20px;">
+                                <svg class="spark-svg" viewBox="0 0 380 90" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 0 70 Q 50 50, 95 60 T 190 35 T 285 45 T 380 15 L 380 90 L 0 90 Z"
+                                        fill="url(#areaGrad_srv)" />
+                                    <path d="M 0 70 Q 50 50, 95 60 T 190 35 T 285 45 T 380 15"
+                                        stroke="url(#lineGrad_srv)" stroke-width="3" stroke-linecap="round"
+                                        fill="none" />
+                                    <circle cx="380" cy="15" r="5" fill="#38BDF8" />
+                                    <defs>
+                                        <linearGradient id="areaGrad_srv" x1="0" y1="0" x2="0" y2="90"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#38BDF8" stop-opacity="0.25" />
+                                            <stop offset="1" stop-color="#2563C0" stop-opacity="0" />
+                                        </linearGradient>
+                                        <linearGradient id="lineGrad_srv" x1="0" y1="0" x2="380" y2="0"
+                                            gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#7DD3FC" />
+                                            <stop offset="0.5" stop-color="#38BDF8" />
+                                            <stop offset="1" stop-color="#2563C0" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+
+                            <div class="pc-stats">
+                                <div class="ps-item">
+                                    <span class="ps-val" style="color: #4ADE80;">NSE &amp; BSE</span>
+                                    <span class="ps-lbl">Direct Access</span>
+                                </div>
+                                <div class="ps-item">
+                                    <span class="ps-val" style="color: var(--blue-200);">0.05s</span>
+                                    <span class="ps-lbl">Order Latency</span>
+                                </div>
+                                <div class="ps-item">
+                                    <span class="ps-val" style="color: var(--white);">100%</span>
+                                    <span class="ps-lbl">SEBI Compliant</span>
+                                </div>
+                            </div>
+
+                            <div class="eq-card-exchanges" style="margin-top: 16px;">
+                                <span class="trust-chip">Cash &amp; Delivery</span>
+                                <span class="trust-chip">Intraday Trading</span>
+                                <span class="trust-chip">Sector Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+     3. SERVICE GRID (9 CORE PRODUCT OFFERINGS)
+=================================================== -->
+        <section class="service-catalog-section" id="service-grid">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="section-tag" style="justify-content: center">SERVICE GRID</div>
+                    <h2 class="head-title-values">COMPREHENSIVE MARKET <br> <span class="gradient-text">INSTRUMENTS
+                            &amp; SOLUTIONS.</span></h2>
+                    <p>Tailored market products designed around your specific investment objectives, liquidity needs,
+                        and risk profile.</p>
+                </div>
+
+                <div class="service-catalog-grid">
+
+                    <!-- 1. DERIVATIVES -->
+                    <div class="sg-card reveal d1">
+                        <div class="sg-icon">⚡</div>
+                        <div class="sg-title">DERIVATIVES</div>
+                        <div class="sg-desc">Explore derivative instruments for sophisticated market participation,
+                            hedging, and disciplined risk-management strategies across Futures &amp; Options.</div>
+                        <a href="contact.html" class="sg-link">Inquire About Derivatives →</a>
+                    </div>
+
+                    <!-- 2. MUTUAL FUNDS -->
+                    <div class="sg-card reveal d2">
+                        <div class="sg-icon">🌱</div>
+                        <div class="sg-title">MUTUAL FUNDS</div>
+                        <div class="sg-desc">Access diversified investment solutions designed around different
+                            investment objectives, time horizons, and risk considerations with systematic SIPs.</div>
+                        <a href="contact.html" class="sg-link">Explore Mutual Funds →</a>
+                    </div>
+
+                    <!-- 3. PRIVATE EQUITY -->
+                    <div class="sg-card reveal d3">
+                        <div class="sg-icon">💎</div>
+                        <div class="sg-title">PRIVATE EQUITY</div>
+                        <div class="sg-desc">Explore curated wealth opportunities beyond traditional listed markets,
+                            subject to investor eligibility and portfolio suitability.</div>
+                        <a href="contact.html" class="sg-link">Discover Private Equity →</a>
+                    </div>
+
+                    <!-- 4. MCX -->
+                    <div class="sg-card reveal d1">
+                        <div class="sg-icon">🪙</div>
+                        <div class="sg-title">MCX (COMMODITIES)</div>
+                        <div class="sg-desc">Participate in dynamic commodity markets through MCX, including precious
+                            metals, energy, and agri-commodities for optimal portfolio hedging.</div>
+                        <a href="contact.html" class="sg-link">Trade on MCX →</a>
+                    </div>
+
+                    <!-- 5. IPOs -->
+                    <div class="sg-card reveal d2">
+                        <div class="sg-icon">🎯</div>
+                        <div class="sg-title">IPOs</div>
+                        <div class="sg-desc">Explore opportunities to participate in new public offerings with an
+                            informed, research-backed perspective and seamless digital bidding.</div>
+                        <a href="contact.html" class="sg-link">View Upcoming IPOs →</a>
+                    </div>
+
+                    <!-- 6. BONDS -->
+                    <div class="sg-card reveal d3">
+                        <div class="sg-icon">🛡️</div>
+                        <div class="sg-title">BONDS</div>
+                        <div class="sg-desc">Explore fixed-income investment opportunities as part of a diversified
+                            financial strategy for stable, predictable yield and capital preservation.</div>
+                        <a href="contact.html" class="sg-link">Explore Bond Offerings →</a>
+                    </div>
+
+                    <!-- 7. DEBENTURES -->
+                    <div class="sg-card reveal d1">
+                        <div class="sg-icon">📜</div>
+                        <div class="sg-title">DEBENTURES</div>
+                        <div class="sg-desc">Understand debt-oriented opportunities and their associated considerations,
+                            providing institutional-grade debt yields and structured returns.</div>
+                        <a href="contact.html" class="sg-link">Learn About Debentures →</a>
+                    </div>
+
+                    <!-- 8. ETFs -->
+                    <div class="sg-card reveal d2">
+                        <div class="sg-icon">📊</div>
+                        <div class="sg-title">ETFs</div>
+                        <div class="sg-desc">Gain diversified, low-cost market exposure through exchange-traded
+                            investment products tracking major indices, sectors, and commodities.</div>
+                        <a href="contact.html" class="sg-link">Invest in ETFs →</a>
+                    </div>
+
+                    <!-- 9. MTF -->
+                    <div class="sg-card reveal d3">
+                        <div class="sg-icon">⚖️</div>
+                        <div class="sg-title">MTF (MARGIN TRADING)</div>
+                        <div class="sg-desc">Margin Trading Facility for eligible investors, with appropriate attention
+                            to leverage, risk parameters, and disciplined portfolio management.</div>
+                        <a href="contact.html" class="sg-link">Check MTF Eligibility →</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- ===================================================
+     4. SPECIALIZED SERVICES (PRE-IPO & FUND RAISING)
+=================================================== -->
+    <section class="specialized-services-section" id="specialized-services">
+        <div class="container">
+            <div class="section-head reveal">
+                <div class="section-tag" style="justify-content: center">SPECIALIZED SERVICES</div>
+                <h2>STRATEGIC CAPITAL &amp; <span class="gradient-text">PRIVATE MARKET ACCESS.</span></h2>
+                <p>Institutional capabilities for forward-thinking investors and expanding enterprises.</p>
+            </div>
+
+            <div class="specialized-grid">
+
+                <!-- Card 1: PRE-IPO -->
+                <div class="spec-card reveal d1">
+                    <div>
+                        <div class="spec-badge">🚀 SPECIALIZED INVESTMENT</div>
+                        <div class="spec-title">PRE-IPO</div>
+                        <div class="spec-subhead">EARLY ACCESS. INFORMED DECISIONS.</div>
+
+                        <p class="spec-body">
+                            Pre-IPO opportunities can provide eligible investors access to high-potential companies
+                            before they enter public markets.
+                        </p>
+                        <p class="spec-body" style="font-weight: 700; color: var(--blue-100);">
+                            But early access doesn't automatically make an opportunity suitable.
+                        </p>
+                        <p class="spec-body">We focus on helping investors understand:</p>
+
+                        <!-- Due Diligence List -->
+                        <ul class="diligence-list">
+                            <li class="diligence-item">
+                                <span class="diligence-icon"><svg viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                                    </svg></span>
+                                <span>The Business</span>
+                            </li>
+                            <li class="diligence-item">
+                                <span class="diligence-icon"><svg viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                                    </svg></span>
+                                <span>The Growth Story</span>
+                            </li>
+                            <li class="diligence-item">
+                                <span class="diligence-icon"><svg viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                                    </svg></span>
+                                <span>The Valuation</span>
+                            </li>
+                            <li class="diligence-item">
+                                <span class="diligence-icon"><svg viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                                    </svg></span>
+                                <span>The Investment Structure</span>
+                            </li>
+                            <li class="diligence-item">
+                                <span class="diligence-icon"><svg viewBox="0 0 12 12" fill="none">
+                                        <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                                    </svg></span>
+                                <span>The Risks</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="spec-punchline">"Opportunity deserves due diligence."</div>
+                        <a href="contact.html" class="btn btn-primary btn-md">Explore Pre-IPO Opportunities →</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: FUND RAISING -->
+                <div class="spec-card reveal d2">
+                    <div>
+                        <div class="spec-badge">🏢 CORPORATE CAPITAL</div>
+                        <div class="spec-title">FUND RAISING</div>
+                        <div class="spec-subhead">CAPITAL FOR THE NEXT STAGE OF YOUR BUSINESS.</div>
+
+                        <p class="spec-body">
+                            Growing businesses often need capital to turn ambition into execution. SMIT Securities works
+                            with businesses exploring strategic fund-raising opportunities by understanding their
+                            business, capital requirements, and growth objectives.
+                        </p>
+
+                        <p class="spec-body" style="font-weight: 700; color: var(--blue-100); margin-bottom: 8px;">Our
+                            approach:</p>
+
+                        <!-- Approach Flow Step Chain -->
+                        <div class="flow-step-chain">
+                            <div class="flow-step-item">
+                                <span class="flow-step-num">1</span>
+                                <span>Understand the Business</span>
+                            </div>
+                            <div class="flow-step-item">
+                                <span class="flow-step-num">2</span>
+                                <span>Understand the Requirement</span>
+                            </div>
+                            <div class="flow-step-item">
+                                <span class="flow-step-num">3</span>
+                                <span>Explore Opportunities</span>
+                            </div>
+                            <div class="flow-step-item">
+                                <span class="flow-step-num">4</span>
+                                <span>Build Relationships</span>
+                            </div>
+                        </div>
+
+                        <p class="spec-body">
+                            Whether the requirement is connected to expansion, growth or a strategic initiative, we
+                            begin with understanding the business first.
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="spec-punchline">"Your ambition deserves the right financial conversation."</div>
+                        <a href="contact.html" class="btn btn-primary btn-md">Discuss Fund Raising →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================
+     5. SERVICES CTA & FOOTER SECTION
+=================================================== -->
+    <section class="cta-footer-section">
+        <!-- SERVICES CTA -->
+        <section class="cta" id="cta">
+            <div class="cta-glow" aria-hidden="true"></div>
+            <div class="rings" aria-hidden="true">
+                <div class="ring ring-1"></div>
+                <div class="ring ring-2"></div>
+                <div class="ring ring-3"></div>
+                <div class="ring ring-4"></div>
+            </div>
+            <div class="container">
+                <div class="cta-inner">
+                    <div class="section-tag reveal" style="justify-content: center">SERVICES CTA</div>
+                    <h2 class="cta-h2 reveal d1">NOT SURE <span class="gradient-text">WHERE TO START?</span></h2>
+
+                    <p class="cta-sub reveal d2" style="max-width: 620px;">
+                        You don't need to know which financial product is right for you before starting the
+                        conversation.<br><br>
+                        <strong>Tell us what you're trying to achieve. We'll start there.</strong>
+                    </p>
+
+                    <div class="cta-btns reveal d3">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            Talk to SMIT Securities
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="currentColor" stroke-width="1.7"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="tel:+919999999999" class="btn btn-ghost btn-lg">📞 Call Our Desk</a>
+                    </div>
+
+                    <div class="cta-trust reveal d4">
+                        <span>✓ Equity, Derivatives &amp; Commodities</span>
+                        <span>✓ Mutual Funds, ETFs &amp; Bonds</span>
+                        <span>✓ Pre-IPO &amp; Fund Raising Advisory</span>
+                        <span>✓ Rajkot &amp; Gondal Hubs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             GLOBAL FOOTER
+        =================================================== -->
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+
+                    <!-- Brand Column -->
+                    <div class="footer-brand">
+                        <a href="index.html" class="nav-logo" aria-label="Smit Securities Home">
+                            <svg class="nav-logo-icon" viewBox="0 0 46 46" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect width="46" height="46" rx="11" fill="#07111F" />
+                                <path
+                                    d="M29 13C29 13 15 13 15 19.5C15 23.5 21 24.5 25 25.5C29 26.5 33 28.5 33 33C33 39 17 39 17 39"
+                                    stroke="url(#fg_srv)" stroke-width="3.2" stroke-linecap="round" fill="none" />
+                                <rect x="24.5" y="8" width="2" height="8" rx="1" fill="url(#fg_srv)" />
+                                <rect x="28.2" y="10.5" width="2" height="5.5" rx="1" fill="url(#fg_srv)" />
+                                <rect x="31.9" y="8.5" width="2" height="7.5" rx="1" fill="url(#fg_srv)" />
+                                <defs>
+                                    <linearGradient id="fg_srv" x1="15" y1="13" x2="33" y2="39"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#7EC8F0" />
+                                        <stop offset="1" stop-color="#2563C0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="nav-logo-text">
+                                <span class="nav-logo-name">SMIT SECURITIES</span>
+                                <span class="nav-logo-sub">Invest · Grow · Prosper</span>
+                            </div>
+                        </a>
+
+                        <div class="footer-brand-tagline">Advice That Builds Wealth.</div>
+
+                        <!-- All 12 Services Pipe List -->
+                        <div class="footer-services-inline">
+                            <a href="service.html#featured-equity">Equity</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Derivatives</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Mutual Funds</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Private Equity</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">MCX</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">IPOs</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Bonds</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">Debentures</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">ETFs</a><span class="pipe">|</span>
+                            <a href="service.html#service-grid">MTF</a><span class="pipe">|</span>
+                            <a href="service.html#specialized-services">Pre-IPO</a><span class="pipe">|</span>
+                            <a href="service.html#specialized-services">Fund Raising</a>
+                        </div>
+
+                        <!-- Regional Hubs -->
+                        <div class="footer-locations-inline">
+                            <span>📍</span>
+                            <a href="contact.html#locations">Gondal</a>
+                            <span style="color: rgba(74, 154, 224, 0.4);">|</span>
+                            <a href="contact.html#locations">Rajkot</a>
+                        </div>
+
+                        <div class="social-row">
+                            <a href="#" class="soc" title="Twitter/X" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="soc" title="LinkedIn" aria-label="LinkedIn">in</a>
+                            <a href="#" class="soc" title="Facebook" aria-label="Facebook">f</a>
+                            <a href="#" class="soc" title="YouTube" aria-label="YouTube">▶</a>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Company -->
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">→ Home</a></li>
+                            <li><a href="about.html">→ About Us</a></li>
+                            <li><a href="service.html">→ Services</a></li>
+                            <li><a href="insights.html">→ Insights</a></li>
+                            <li><a href="contact.html">→ Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Services -->
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="service.html#featured-equity">→ Equity</a></li>
+                            <li><a href="service.html#service-grid">→ Derivatives</a></li>
+                            <li><a href="service.html#service-grid">→ Mutual Funds</a></li>
+                            <li><a href="service.html#service-grid">→ Private Equity</a></li>
+                            <li><a href="service.html#service-grid">→ MCX</a></li>
+                            <li><a href="service.html#service-grid">→ IPOs</a></li>
+                            <li><a href="service.html#service-grid">→ Bonds</a></li>
+                            <li><a href="service.html#service-grid">→ Debentures</a></li>
+                            <li><a href="service.html#service-grid">→ ETFs</a></li>
+                            <li><a href="service.html#service-grid">→ MTF</a></li>
+                            <li><a href="service.html#specialized-services">→ Pre-IPO</a></li>
+                            <li><a href="service.html#specialized-services">→ Fund Raising</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Connect -->
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <ul class="footer-links">
+                            <li><a href="contact.html#locations">📍 Gondal Desk</a></li>
+                            <li><a href="contact.html#locations">📍 Rajkot Desk</a></li>
+                            <li><a href="tel:+91XXXXXXXXXX">📞 +91 XXXXX XXXXX</a></li>
+                            <li><a href="mailto:info@smitsecurities.com">✉ info@smitsecurities.com</a></li>
+                            <li><a href="contact.html#locations">🕐 Mon–Sat: 9 AM – 6 PM</a></li>
+                        </ul>
+                        <div style="margin-top: 18px">
+                            <div class="sebi-chip">🏛️ SEBI Reg: INZ000XXXXXX</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <p>© 2026 Smit Securities. All rights reserved. &nbsp;|&nbsp;
+                        <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+                        <a href="#">Terms of Use</a> &nbsp;|&nbsp;
+                        <a href="#">Disclaimer</a>
+                    </p>
+                    <p>⚠️ Investments are subject to market risks. Please read all scheme-related documents carefully
+                        before investing.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Scroll To Top Floating Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Scroll to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
