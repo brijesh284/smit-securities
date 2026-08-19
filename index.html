@@ -58,9 +58,29 @@
       "serviceType": ["Equity Trading", "Mutual Funds", "Derivatives F&O", "Portfolio Management", "Wealth Management", "IPO Advisory"]
     }
     </script>
+
+    <!-- Session Preloader Check (Anti-Flicker) -->
+    <script>
+        (function () {
+            if (sessionStorage.getItem('smit_home_visited')) {
+                document.documentElement.classList.add('no-loader');
+            }
+        })();
+    </script>
 </head>
 
 <body>
+
+    <!-- ===================================================
+     DEZERV-STYLE LUXURY PRELOADER (First Visit Only)
+=================================================== -->
+    <div id="smit-preloader" aria-hidden="true">
+        <div class="smit-loader-content">
+            <h1 class="smit-loader-text">WELCOME TO SMIT SECURITIES</h1>
+            <div class="smit-loader-line"></div>
+        </div>
+    </div>
+
 
     <!-- ===================================================
      MOBILE MENU OVERLAY

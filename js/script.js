@@ -225,3 +225,47 @@ if (scrollTopBtn) {
     });
 }
 
+
+/* ============================================================
+   DEZERV-STYLE PRELOADER CONTROLLER (First Visit Only)
+============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+    const preloader = document.getElementById('smit-preloader');
+    if (!preloader) return;
+
+    // Check if user has already visited in this session
+    if (sessionStorage.getItem('smit_home_visited')) {
+        preloader.style.display = 'none';
+        return;
+    }
+
+    // Lock body scrolling while preloader runs
+    document.body.style.overflow = 'hidden';
+
+    let loaderDismissed = false;
+    const hideLoader = () => {
+        if (loaderDismissed) return;
+        loaderDismissed = true;
+
+        setTimeout(() => {
+            preloader.classList.add('loader-hidden');
+            document.body.style.overflow = '';
+            sessionStorage.setItem('smit_home_visited', 'true');
+
+            // Clean up DOM node after transition completes
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 1000);
+        }, 1600); // 1.6s display duration for crisp, premium feel
+    };
+
+    if (document.readyState === 'complete') {
+        hideLoader();
+    } else {
+        window.addEventListener('load', hideLoader);
+        // Fallback safety trigger after 3.5s max
+        setTimeout(hideLoader, 3500);
+    }
+});
+
+
