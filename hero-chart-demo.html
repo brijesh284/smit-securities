@@ -67,9 +67,214 @@
             }
         })();
     </script>
+
+    <style>
+        /* ============================================================
+           SMIT LUXURY MODERN MULTI-LAYERED WEBSITE BACKGROUND SYSTEM
+        ============================================================ */
+        
+        /* 1. Master Body Background: Deep Cosmic Sapphire Radial Mesh with Subtle Grid */
+        body {
+            background-color: #030813 !important;
+            background-image: 
+                radial-gradient(ellipse 90% 60% at 50% 0%, rgba(37, 99, 192, 0.22) 0%, rgba(7, 17, 33, 0) 70%),
+                radial-gradient(ellipse 70% 50% at 85% 35%, rgba(56, 189, 248, 0.08) 0%, rgba(3, 8, 19, 0) 60%),
+                radial-gradient(ellipse 65% 45% at 15% 65%, rgba(37, 99, 192, 0.10) 0%, rgba(3, 8, 19, 0) 65%),
+                radial-gradient(ellipse 80% 50% at 50% 95%, rgba(56, 189, 248, 0.12) 0%, rgba(3, 8, 19, 0) 70%),
+                radial-gradient(rgba(74, 154, 224, 0.07) 1px, transparent 1px) !important;
+            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 32px 32px !important;
+            background-position: 0 0, 0 0, 0 0, 0 0, 0 0 !important;
+            background-attachment: scroll, scroll, scroll, scroll, fixed !important;
+            color: #ffffff;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* 2. Floating Atmospheric Aurora Blooms (Global Parallax Atmosphere) */
+        .bg-aurora-glow {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(90px);
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        .aurora-top-right {
+            top: 250px;
+            right: -100px;
+            width: 580px;
+            height: 580px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.16) 0%, rgba(37, 99, 192, 0.08) 50%, transparent 70%);
+        }
+
+        .aurora-mid-left {
+            top: 1450px;
+            left: -150px;
+            width: 650px;
+            height: 650px;
+            background: radial-gradient(circle, rgba(37, 99, 192, 0.18) 0%, rgba(32, 116, 176, 0.06) 55%, transparent 70%);
+        }
+
+        .aurora-mid-right {
+            top: 2700px;
+            right: -120px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.14) 0%, rgba(37, 99, 192, 0.08) 50%, transparent 70%);
+        }
+
+        .aurora-bottom-center {
+            bottom: 400px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 500px;
+            background: radial-gradient(ellipse, rgba(37, 99, 192, 0.18) 0%, rgba(56, 189, 248, 0.08) 45%, transparent 75%);
+        }
+
+        /* 3. Section Transparency & Glass Enhancements */
+        .new-hero-section {
+            background: transparent !important;
+        }
+
+        .new-hero-section::after {
+            opacity: 0.85 !important;
+        }
+
+        .partners-hero-section {
+            background: transparent !important;
+            border-top: 1px solid rgba(74, 154, 224, 0.14);
+            border-bottom: 1px solid rgba(74, 154, 224, 0.14);
+            position: relative;
+            z-index: 2;
+        }
+
+        .wwh-section {
+            background: transparent !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .wwh-card {
+            background: rgba(10, 22, 42, 0.7) !important;
+            border: 1px solid rgba(74, 154, 224, 0.24) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.12) !important;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        .wwh-card:hover {
+            border-color: rgba(56, 189, 248, 0.65) !important;
+            background: linear-gradient(180deg, rgba(18, 36, 68, 0.85) 0%, rgba(10, 22, 44, 0.95) 100%) !important;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(56, 189, 248, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.25) !important;
+        }
+
+        .svc-section, .services-section {
+            background: transparent !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .svc-card, .service-card {
+            background: rgba(10, 22, 42, 0.72) !important;
+            border: 1px solid rgba(74, 154, 224, 0.25) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45) !important;
+        }
+
+        .svc-card:hover, .service-card:hover {
+            border-color: rgba(56, 189, 248, 0.6) !important;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(56, 189, 248, 0.25) !important;
+        }
+
+        .rsc-section {
+            background: transparent !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .rsc-card {
+            background: rgba(10, 22, 42, 0.72) !important;
+            border: 1px solid rgba(74, 154, 224, 0.24) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+        }
+
+        .story-section {
+            background: transparent !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .story-wrap {
+            background: linear-gradient(135deg, rgba(14, 28, 54, 0.75) 0%, rgba(6, 16, 32, 0.85) 100%) !important;
+            border: 1px solid rgba(74, 154, 224, 0.3) !important;
+            backdrop-filter: blur(24px) !important;
+            -webkit-backdrop-filter: blur(24px) !important;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 45px rgba(37, 99, 192, 0.18) !important;
+        }
+
+        .faq-section {
+            background: transparent !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .faq-item {
+            background: rgba(10, 22, 42, 0.65) !important;
+            border: 1px solid rgba(74, 154, 224, 0.22) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+        }
+
+        .cta-section {
+            background: transparent !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(16, 36, 68, 0.85) 0%, rgba(8, 20, 40, 0.95) 100%) !important;
+            border: 1px solid rgba(74, 154, 224, 0.4) !important;
+            backdrop-filter: blur(30px) !important;
+            -webkit-backdrop-filter: blur(30px) !important;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7), 0 0 60px rgba(56, 189, 248, 0.25) !important;
+        }
+
+        .footer {
+            background: rgba(4, 9, 20, 0.92) !important;
+            border-top: 1px solid rgba(74, 154, 224, 0.2) !important;
+            backdrop-filter: blur(20px) !important;
+            -webkit-backdrop-filter: blur(20px) !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Ambient Glowing Horizon Dividers */
+        .section-glow-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(74, 154, 224, 0.35) 50%, transparent 100%);
+            margin: 0 auto;
+            pointer-events: none;
+        }
+
+        .rsc-subtext {
+            margin: 0 auto clamp(36px, 5vw, 64px) !important;
+        }
+
+        .rsc-wrap {
+            margin-top: clamp(40px, 5.5vw, 70px) !important;
+        }
+    </style>
+
 </head>
 
 <body>
+
     <!-- Ambient Cosmic Aurora Lighting Blooms (Modern Web Background) -->
     <div class="bg-aurora-glow aurora-top-right" aria-hidden="true"></div>
     <div class="bg-aurora-glow aurora-mid-left" aria-hidden="true"></div>

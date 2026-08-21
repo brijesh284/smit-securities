@@ -14,7 +14,6 @@ SMIT Securities is a high-performance, responsive, multi-page financial advisory
   - `Services` (`service.html`) - 12 specialized investment domains (Equity, Derivatives, Mutual Funds, IPOs, Bonds, etc.).
   - `Insights` (`insights.html`) - Research pillars, featured articles, and curated perspectives.
   - `Contact Us` (`contact.html`) - Interactive consultation form and physical regional desks.
-- **Live Interactive Marquee & Ticker**: Real-time style stock ticker for NIFTY, SENSEX, BANK NIFTY, etc.
 - **Micro-Animations & Glassmorphism**: Tailored gradients, frosted glass cards, and smooth hover dynamics.
 
 ## 📁 Project Structure

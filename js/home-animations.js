@@ -38,7 +38,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
                 cardsTimeline.scrollTrigger && cardsTimeline.scrollTrigger.kill();
                 cardsTimeline.kill();
             }
-            gsap.set(cards, { clearProps: "all" });
+            gsap.set(cards, { clearProps: "all" }); /* wwh-card-fixed */
 
             if (window.innerWidth < 992 || !gridEl || cards.length === 0) {
                 return;
@@ -68,13 +68,13 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
                 });
             });
 
-            // Pinned scrub timeline
+            // Pinned scrub timeline on the entire section so title & cards stay together without excess gap
             cardsTimeline = gsap.timeline({
                 scrollTrigger: {
-                    trigger: ".wwh-stage",
-                    start: "top 65%",
-                    end: "+=55%",
-                    scrub: 0.4,
+                    trigger: wwhSection,
+                    start: "top top+=80px",
+                    end: "+=480",
+                    scrub: 0.5,
                     pin: true,
                     pinSpacing: true,
                     anticipatePin: 1
@@ -89,7 +89,7 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
                     scale: 1,
                     duration: 1,
                     ease: "power2.out"
-                }, i * 0.35);
+                }, i * 0.25);
             });
         }
 
@@ -230,5 +230,8 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     observeGroup('#equity .reveal', 0.12, '0px 0px -44px 0px');
     observeGroup('#pre-ipo-fundraising .reveal', 0.12, '0px 0px -44px 0px');
     observeGroup('#generational-trust .gt-visual, #generational-trust .gt-tag, #generational-trust h2, #generational-trust .gt-evolve, #generational-trust .gt-body, #generational-trust .gt-close, #generational-trust .gt-cta', 0.15, '0px 0px -40px 0px');
+    observeGroup('#bni .reveal, #bni .bni-card, #bni .bni-net-item', 0.12, '0px 0px -40px 0px');
     observeGroup('#how-we-work .hww-tag, #how-we-work h2, #how-we-work .hww-step', 0.15, '0px 0px -40px 0px');
+    observeGroup('#cta .reveal', 0.12, '0px 0px -40px 0px');
 })();
+
