@@ -269,6 +269,58 @@
         .rsc-wrap {
             margin-top: clamp(40px, 5.5vw, 70px) !important;
         }
+    
+        /* IPHONE 15 & MOBILE FLUID TYPOGRAPHY & SPACING REFINEMENTS */
+        @media (max-width: 768px) {
+            .new-hero-title, .hero-title, h1 {
+                font-size: clamp(26px, 7.8vw, 36px) !important;
+                line-height: 1.18 !important;
+                letter-spacing: -0.02em !important;
+                margin-bottom: 16px !important;
+            }
+            .new-hero-desc, .hero-desc {
+                font-size: clamp(14px, 3.8vw, 15.5px) !important;
+                line-height: 1.55 !important;
+                margin-bottom: 24px !important;
+            }
+            .section-head h2, .wwh-heading, .rsc-heading, .eq-content h2, h2 {
+                font-size: clamp(22px, 6.2vw, 29px) !important;
+                line-height: 1.24 !important;
+                letter-spacing: -0.015em !important;
+                margin-bottom: 10px !important;
+            }
+            .section-head p, .rsc-subtext, .wwh-inner p, .eq-sub {
+                font-size: clamp(13.5px, 3.8vw, 15px) !important;
+                line-height: 1.55 !important;
+            }
+        }
+
+        .eq-content { text-align: left !important; }
+        .eq-content .section-tag { justify-content: flex-start !important; margin-left: 0 !important; }
+        .eq-content h2, .eq-sub, .eq-lede { text-align: left !important; }
+        .eq-exchanges { display: flex !important; justify-content: flex-start !important; align-items: center !important; gap: 8px !important; flex-wrap: wrap !important; margin: 12px 0 20px !important; }
+        .trust-chip { padding: 6px 16px !important; background: rgba(37, 99, 192, 0.25) !important; border: 1px solid rgba(74, 154, 224, 0.35) !important; border-radius: 8px !important; font-size: 12.5px !important; font-weight: 800 !important; color: #ffffff !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
+        .eq-cta { display: flex !important; justify-content: flex-start !important; }
+
+        @media (max-width: 991px) {
+            .eq-wrap { grid-template-columns: 1fr !important; gap: 36px !important; text-align: left !important; }
+            .eq-content .section-tag, .eq-exchanges, .eq-cta { justify-content: flex-start !important; }
+            .rsc-section { padding: clamp(40px, 6vw, 65px) 0 !important; }
+            .rsc-wrap { margin-top: 24px !important; gap: 20px !important; }
+            .rsc-col { gap: 12px !important; width: 100% !important; max-width: 100% !important; }
+            .rsc-feature-slot { min-height: auto !important; margin-bottom: 0 !important; flex: 1 1 100% !important; max-width: 100% !important; }
+            .rsc-feature { position: static !important; width: 100% !important; max-width: 100% !important; padding: 14px 16px !important; border-radius: 14px !important; background: rgba(14, 28, 54, 0.72) !important; border: 1px solid rgba(74, 154, 224, 0.24) !important; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important; }
+            .rsc-feature.group-hidden { display: none !important; }
+        }
+
+        @media (max-width: 640px) {
+            .rsc-wrap { margin-top: 18px !important; gap: 16px !important; }
+            .rsc-phone { width: 220px !important; height: 330px !important; }
+            .rsc-feature { padding: 12px 14px !important; }
+            .rsc-feature h3 { font-size: 15px !important; margin-bottom: 4px !important; }
+            .rsc-feature p { font-size: 12.5px !important; line-height: 1.5 !important; }
+        }
+
     </style>
 
 </head>
