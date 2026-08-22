@@ -42,6 +42,9 @@
         href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <!-- Remix Icons (Modern Vector Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 
@@ -321,6 +324,614 @@
             .rsc-feature p { font-size: 12.5px !important; line-height: 1.5 !important; }
         }
 
+        /* ============================================================
+           HERO PORTFOLIO & ORBITAL ECOSYSTEM (CLIENT REFERENCE CONCEPT)
+        ============================================================ */
+        .hero-portfolio-ecosystem {
+            position: relative;
+            width: 100%;
+            max-width: 1040px;
+            margin: 48px auto 0;
+            min-height: 640px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 1. Concentric Circular Radar Orbit Rings */
+        .orbit-system {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .orbit-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px dashed rgba(74, 154, 224, 0.28);
+            box-sizing: border-box;
+            transform-origin: center center;
+        }
+
+        .orbit-ring-1 {
+            width: 420px;
+            height: 420px;
+            border-color: rgba(56, 189, 248, 0.35);
+            animation: rotateOrbit 40s linear infinite;
+        }
+
+        .orbit-ring-2 {
+            width: 600px;
+            height: 600px;
+            border-color: rgba(74, 154, 224, 0.22);
+            animation: rotateOrbitReverse 60s linear infinite;
+        }
+
+        .orbit-ring-3 {
+            width: 780px;
+            height: 780px;
+            border-color: rgba(74, 154, 224, 0.16);
+            animation: rotateOrbit 80s linear infinite;
+        }
+
+        .orbit-ring-4 {
+            width: 960px;
+            height: 960px;
+            border-color: rgba(74, 154, 224, 0.10);
+            animation: rotateOrbitReverse 100s linear infinite;
+        }
+
+        @keyframes rotateOrbit {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotateOrbitReverse {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        /* 2. Floating Orbiting Glass Service Cards */
+        .orbit-card {
+            position: absolute;
+            z-index: 10;
+            background: rgba(10, 24, 48, 0.85);
+            border: 1.5px solid rgba(74, 154, 224, 0.38);
+            border-radius: 20px;
+            padding: 16px 22px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55), 0 0 25px rgba(56, 189, 248, 0.18);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+        }
+
+        .orbit-card:hover {
+            border-color: #38bdf8;
+            background: rgba(14, 32, 64, 0.95);
+            transform: scale(1.08) translateY(-6px) !important;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(56, 189, 248, 0.45);
+        }
+
+        .orbit-card .oc-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #38bdf8;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .orbit-card:hover .oc-icon {
+            background: linear-gradient(135deg, #2563eb, #38bdf8);
+            color: #ffffff;
+            transform: rotate(-6deg);
+        }
+
+        .orbit-card .oc-label {
+            font-family: var(--font-display);
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 1.3;
+            letter-spacing: 0.3px;
+            color: #ffffff;
+        }
+
+        /* Positions & Gentle Staggered Floating Animations */
+        .orbit-card-ipo {
+            top: 2%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: floatCardIpo 5s ease-in-out infinite;
+        }
+
+        .orbit-card-trading {
+            top: 22%;
+            left: 4%;
+            animation: floatCardTrading 6s ease-in-out infinite 0.5s;
+        }
+
+        .orbit-card-mf {
+            bottom: 16%;
+            left: 3%;
+            animation: floatCardMf 5.5s ease-in-out infinite 1.2s;
+        }
+
+        .orbit-card-wealth {
+            top: 22%;
+            right: 4%;
+            animation: floatCardWealth 6.2s ease-in-out infinite 0.8s;
+        }
+
+        .orbit-card-advisory {
+            bottom: 16%;
+            right: 3%;
+            animation: floatCardAdvisory 5.8s ease-in-out infinite 1.5s;
+        }
+
+        @keyframes floatCardIpo {
+            0%, 100% { transform: translate(-50%, 0); }
+            50% { transform: translate(-50%, -10px); }
+        }
+
+        @keyframes floatCardTrading {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        @keyframes floatCardMf {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes floatCardWealth {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        @keyframes floatCardAdvisory {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-9px); }
+        }
+
+        /* 3. Central Smartphone Device Frame */
+        .phone-device-wrap {
+            position: relative;
+            z-index: 5;
+            animation: floatPhone 6s ease-in-out infinite;
+        }
+
+        @keyframes floatPhone {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .phone-device-chassis {
+            width: 320px;
+            max-width: 90vw;
+            height: 590px;
+            background: #020617;
+            border-radius: 44px;
+            border: 9px solid #1e293b;
+            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 50px rgba(37, 99, 192, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 96px;
+            height: 22px;
+            background: #090e17;
+            border-radius: 20px;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .phone-camera {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #1e293b;
+            box-shadow: inset 0 0 2px #38bdf8;
+        }
+
+        .phone-speaker {
+            width: 34px;
+            height: 4px;
+            border-radius: 4px;
+            background: #1e293b;
+        }
+
+        .phone-screen {
+            flex: 1;
+            background: #ffffff;
+            color: #0f172a;
+            padding: 38px 14px 14px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            font-family: 'Urbanist', sans-serif;
+            text-align: left;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding: 0 4px;
+        }
+
+        .app-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.2px;
+        }
+
+        .app-live-chip {
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            color: #059669;
+            font-size: 10.5px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .app-live-chip .pulse-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: appPulse 1.5s infinite;
+        }
+
+        @keyframes appPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.3); }
+        }
+
+        .portfolio-metrics-grid {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 10px 12px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 12px;
+            margin-bottom: 10px;
+        }
+
+        .pm-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pm-col.text-right {
+            text-align: right;
+            align-items: flex-end;
+        }
+
+        .pm-lbl {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .pm-val {
+            font-size: 13.5px;
+            font-weight: 800;
+            color: #0f172a;
+            font-family: var(--font-display);
+        }
+
+        .pm-val.text-green {
+            color: #16a34a;
+        }
+
+        .pm-val small {
+            font-size: 10.5px;
+            font-weight: 700;
+        }
+
+        .portfolio-tabs {
+            display: flex;
+            border-bottom: 1.5px solid #e2e8f0;
+            margin-bottom: 10px;
+        }
+
+        .p-tab {
+            flex: 1;
+            padding: 7px 0;
+            background: transparent;
+            border: none;
+            font-size: 12px;
+            font-weight: 800;
+            color: #64748b;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .p-tab.active {
+            color: #16a34a;
+        }
+
+        .p-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1.5px;
+            left: 0;
+            right: 0;
+            height: 2.5px;
+            background: #16a34a;
+            border-radius: 2px;
+        }
+
+        .app-search-bar {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 7px 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11.5px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        .app-filter-icon {
+            margin-left: auto;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        .holdings-list-scroll {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-right: 2px;
+        }
+
+        .holdings-list-scroll::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        .holdings-list-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+
+        .holding-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 7px 8px;
+            background: #ffffff;
+            border: 1px solid #f1f5f9;
+            border-radius: 10px;
+            transition: background 0.2s ease;
+        }
+
+        .holding-row:hover {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+        }
+
+        .hr-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hr-symbol {
+            font-size: 12px;
+            font-weight: 800;
+            color: #0f172a;
+            font-family: var(--font-display);
+        }
+
+        .hr-sub {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .hr-sub strong {
+            color: #334155;
+        }
+
+        .hr-qty-badge {
+            background: #e2e8f0;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 10px;
+            color: #475569;
+            font-weight: 600;
+        }
+
+        .hr-qty-badge strong {
+            color: #0f172a;
+            font-weight: 800;
+        }
+
+        .hr-right {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .hr-profit {
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .hr-ltp {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .hr-ltp strong {
+            color: #0f172a;
+        }
+
+        .text-green { color: #16a34a !important; }
+        .text-red { color: #dc2626 !important; }
+
+        .phone-home-indicator {
+            width: 110px;
+            height: 4px;
+            background: #cbd5e1;
+            border-radius: 4px;
+            margin: 6px auto 0;
+        }
+
+        .phone-shadow-glow {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 240px;
+            height: 25px;
+            background: radial-gradient(ellipse, rgba(56, 189, 248, 0.45) 0%, rgba(37, 99, 192, 0.2) 40%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(10px);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Mobile Adjustments for Portfolio Ecosystem */
+        @media (max-width: 991px) {
+            .hero-portfolio-ecosystem {
+                min-height: 560px;
+            }
+
+            .orbit-card {
+                padding: 12px 16px;
+            }
+
+            .orbit-card .oc-icon {
+                width: 38px;
+                height: 38px;
+                font-size: 18px;
+            }
+
+            .orbit-card .oc-label {
+                font-size: 12px;
+            }
+
+            .orbit-ring-1 { width: 340px; height: 340px; }
+            .orbit-ring-2 { width: 480px; height: 480px; }
+            .orbit-ring-3 { width: 620px; height: 620px; }
+            .orbit-ring-4 { width: 760px; height: 760px; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-portfolio-ecosystem {
+                min-height: 520px;
+                margin-top: 32px;
+            }
+
+            .phone-device-chassis {
+                width: 280px;
+                height: 500px;
+                border-width: 7px;
+                border-radius: 36px;
+            }
+
+            .orbit-card-ipo {
+                top: 0%;
+            }
+
+            .orbit-card-trading {
+                top: 15%;
+                left: 0%;
+            }
+
+            .orbit-card-wealth {
+                top: 15%;
+                right: 0%;
+            }
+
+            .orbit-card-mf {
+                bottom: 5%;
+                left: 0%;
+            }
+
+            .orbit-card-advisory {
+                bottom: 5%;
+                right: 0%;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .hero-portfolio-ecosystem {
+                flex-direction: column;
+                min-height: auto;
+                padding-bottom: 20px;
+            }
+
+            .orbit-card {
+                position: static !important;
+                transform: none !important;
+                animation: none !important;
+                width: calc(50% - 6px);
+                box-sizing: border-box;
+                padding: 12px 10px;
+            }
+
+            .orbit-cards-mobile-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                width: 100%;
+                margin-top: 24px;
+                justify-content: center;
+            }
+
+            .orbit-card-ipo {
+                width: 100% !important;
+            }
+
+            .orbit-system {
+                display: none !important;
+            }
+        }
+
     </style>
 
 </head>
@@ -349,7 +960,7 @@
      MOBILE MENU OVERLAY
 =================================================== -->
     <div class="mob-menu" id="mobMenu" role="navigation" aria-label="Mobile navigation">
-        <button class="mob-close" onclick="closeMob()" aria-label="Close menu">✕</button>
+        <button class="mob-close" onclick="closeMob()" aria-label="Close menu"><i class="ri-close-line"></i></button>
         <a href="index.html" class="active-link" onclick="closeMob()">Home</a>
         <a href="about.html" onclick="closeMob()">About Us</a>
         <a href="service.html" onclick="closeMob()">Service</a>
@@ -452,130 +1063,6 @@
                         </svg>
                     </a>
                     <a href="#services" class="btn btn-ghost btn-lg">Talk to Our Team</a>
-                </div>
-
-                <!-- ============================================================
-                     MODERN LIVE SHARE MARKET DYNAMIC TERMINAL & CHART
-                ============================================================ -->
-                <div class="hero-market-terminal">
-
-                    <!-- Top Bar: Live Pill, Index Tabs, Timeframe -->
-                    <div class="terminal-header">
-                        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-                            <div class="market-live-indicator">
-                                <span class="live-dot-pulse"></span>
-                                <span>NSE / BSE LIVE STREAM</span>
-                            </div>
-
-                            <div class="index-tabs" id="terminalTabs">
-                                <button class="index-tab-btn active" data-index="nifty">
-                                    <span>NIFTY 50</span>
-                                    <span class="tab-badge">+1.42%</span>
-                                </button>
-                                <button class="index-tab-btn" data-index="sensex">
-                                    <span>SENSEX</span>
-                                    <span class="tab-badge">+1.28%</span>
-                                </button>
-                                <button class="index-tab-btn" data-index="banknifty">
-                                    <span>BANK NIFTY</span>
-                                    <span class="tab-badge">+0.95%</span>
-                                </button>
-                                <button class="index-tab-btn" data-index="alpha">
-                                    <span>SMIT ALPHA</span>
-                                    <span class="tab-badge" style="background: rgba(56, 189, 248, 0.25); color: #38bdf8;">+28.4%</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="timeframe-pills">
-                            <button class="tf-pill-btn active" data-tf="1D">1D</button>
-                            <button class="tf-pill-btn" data-tf="1W">1W</button>
-                            <button class="tf-pill-btn" data-tf="1M">1M</button>
-                            <button class="tf-pill-btn" data-tf="1Y">1Y</button>
-                            <button class="tf-pill-btn" data-tf="ALL">ALL</button>
-                        </div>
-                    </div>
-
-                    <!-- Live Price Display -->
-                    <div class="terminal-price-strip">
-                        <div class="price-left-box">
-                            <span class="main-live-price" id="tLivePrice">₹24,840.50</span>
-                            <span class="price-change-tag" id="tLiveChange">
-                                ▲ +348.20 (+1.42%)
-                            </span>
-                        </div>
-
-                        <div class="price-stats-box">
-                            <span>Day High: <strong id="tStatHigh">₹24,895.10</strong></span>
-                            <span>Day Low: <strong id="tStatLow">₹24,510.30</strong></span>
-                            <span>Volume: <strong id="tStatVol">48.2M</strong></span>
-                        </div>
-                    </div>
-
-                    <!-- Live High-Precision Smooth Wave Canvas -->
-                    <div class="terminal-chart-stage">
-                        <canvas id="terminalMarketCanvas"></canvas>
-
-                        <!-- Floating HUD Badge Left -->
-                        <div class="chart-hud-badge hud-badge-left">
-                            <div class="chb-icon">📈</div>
-                            <div>
-                                <div class="chb-title">SMIT Advisory Index</div>
-                                <div class="chb-val" style="color: #4ade80;">+28.4% Outperformance</div>
-                            </div>
-                        </div>
-
-                        <!-- Floating HUD Badge Right -->
-                        <div class="chart-hud-badge hud-badge-right">
-                            <div class="chb-icon" style="color: #38bdf8;">⚡</div>
-                            <div>
-                                <div class="chb-title">Institutional Flow</div>
-                                <div class="chb-val" style="color: #38bdf8;">🟢 94% Bullish Flow</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bottom 4-Column Market Matrix -->
-                    <div class="terminal-bottom-matrix">
-                        <div class="tbm-card">
-                            <span class="tbm-lbl">Market Breadth</span>
-                            <span class="tbm-val green">1,640 Adv / 420 Dec</span>
-                        </div>
-                        <div class="tbm-card">
-                            <span class="tbm-lbl">52-Week High Range</span>
-                            <span class="tbm-val">₹26,277.35</span>
-                        </div>
-                        <div class="tbm-card">
-                            <span class="tbm-lbl">FII / DII Net Flow</span>
-                            <span class="tbm-val green">+₹3,420.5 Cr (Buy)</span>
-                        </div>
-                        <div class="tbm-card">
-                            <span class="tbm-lbl">AI Market Sentiment</span>
-                            <span class="tbm-val blue">88% Bullish Momentum</span>
-                        </div>
-                    </div>
-
-                    <!-- Infinite Live Stock Ticker Ribbon -->
-                    <div class="terminal-ticker-strip">
-                        <div class="terminal-ticker-track">
-                            <span class="ttt-item"><strong>NIFTY 50</strong> 24,840.50 <span class="gain">▲ +1.42%</span></span>
-                            <span class="ttt-item"><strong>SENSEX</strong> 81,350.20 <span class="gain">▲ +1.28%</span></span>
-                            <span class="ttt-item"><strong>RELIANCE</strong> ₹2,984.50 <span class="gain">▲ +2.15%</span></span>
-                            <span class="ttt-item"><strong>HDFCBANK</strong> ₹1,648.20 <span class="gain">▲ +1.80%</span></span>
-                            <span class="ttt-item"><strong>TCS</strong> ₹4,152.00 <span class="gain">▲ +1.40%</span></span>
-                            <span class="ttt-item"><strong>SMIT ALPHA FUND</strong> <span class="cyan">▲ +28.4% YTD</span></span>
-                            <span class="ttt-item"><strong>FII / DII NET FLOW</strong> <span class="gain">+₹3,420 Cr Inflow</span></span>
-                            <!-- Duplicate for seamless loop -->
-                            <span class="ttt-item"><strong>NIFTY 50</strong> 24,840.50 <span class="gain">▲ +1.42%</span></span>
-                            <span class="ttt-item"><strong>SENSEX</strong> 81,350.20 <span class="gain">▲ +1.28%</span></span>
-                            <span class="ttt-item"><strong>RELIANCE</strong> ₹2,984.50 <span class="gain">▲ +2.15%</span></span>
-                            <span class="ttt-item"><strong>HDFCBANK</strong> ₹1,648.20 <span class="gain">▲ +1.80%</span></span>
-                            <span class="ttt-item"><strong>TCS</strong> ₹4,152.00 <span class="gain">▲ +1.40%</span></span>
-                            <span class="ttt-item"><strong>SMIT ALPHA FUND</strong> <span class="cyan">▲ +28.4% YTD</span></span>
-                            <span class="ttt-item"><strong>FII / DII NET FLOW</strong> <span class="gain">+₹3,420 Cr Inflow</span></span>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
@@ -892,12 +1379,6 @@
 
                         <p class="eq-sub reveal d1 in">Because better decisions begin with better understanding.
                         </p>
-                        <!-- <div class="trust-strip">
-                            <span class="trust-lbl">Trusted By</span>
-                            <span class="trust-chip">🏛️ SEBI Registered</span>
-                            <span class="trust-chip">🔒 NSE &amp; BSE</span>
-                            <span class="trust-chip">⭐ 4.9 / 5 Rating</span>
-                        </div> -->
                     </div>
 
                     <!-- Right: Portfolio Card Visual -->
@@ -959,14 +1440,14 @@
 
                         <!-- Floating Micro-Cards -->
                         <div class="float-card fc-1" aria-hidden="true">
-                            <div class="fc-icon">📊</div>
+                            <div class="fc-icon"><i class="ri-user-star-line"></i></div>
                             <div>
                                 <div class="fc-label">Active Clients</div>
                                 <div class="fc-value">10,000+</div>
                             </div>
                         </div>
                         <div class="float-card fc-2" aria-hidden="true">
-                            <div class="fc-icon">🏆</div>
+                            <div class="fc-icon"><i class="ri-trophy-line"></i></div>
                             <div>
                                 <div class="fc-label">AUM Managed</div>
                                 <div class="fc-value">₹500 Cr+</div>
@@ -989,176 +1470,223 @@
                     
                     <!-- RIGHT: REPLACED WITH USEFUL EQUITY INTELLIGENCE & EXECUTION HUB -->
                     
-                    <!-- RIGHT: ULTRA-MODERN VISUAL EQUITY CHART WIDGET -->
+                    <!-- LEFT: ULTRA-MODERN SMARTPHONE PORTFOLIO & ORBITAL SERVICES ECOSYSTEM -->
                     <div class="eq-visual reveal d2">
-                        <div class="eq-modern-card">
+                        <div class="equity-portfolio-ecosystem">
 
-                            <!-- Top Bar -->
-                            <div class="eqm-header">
-                                <div class="eqm-title-box">
-                                    <span class="eqm-live-dot"></span>
-                                    <span class="eqm-title">NSE / BSE EQUITY ADVISORY MATRIX</span>
-                                </div>
-                                <div class="eqm-filter-pills" id="eqFilterTabs">
-                                    <button class="eqm-pill active" data-filter="all">All-Cap</button>
-                                    <button class="eqm-pill" data-filter="large">Largecap</button>
-                                    <button class="eqm-pill" data-filter="mid">Midcap</button>
-                                </div>
+                            <!-- Concentric Circular Radar Orbit Rings -->
+                            <div class="eq-orbit-system" aria-hidden="true">
+                                <div class="eq-orbit-ring eq-orbit-ring-1"></div>
+                                <div class="eq-orbit-ring eq-orbit-ring-2"></div>
+                                <div class="eq-orbit-ring eq-orbit-ring-3"></div>
                             </div>
 
-                            <!-- Live Metric Row -->
-                            <div class="eqm-metric-row">
-                                <div>
-                                    <span class="eqm-val-big" id="eqBigVal">+28.4%</span>
-                                    <span class="eqm-val-gain" id="eqSubGain">▲ Alpha vs Nifty</span>
-                                </div>
-                                <div class="eqm-alpha-badge">⚡ &lt;15ms DMA Execution</div>
+                            <!-- Orbiting Glass Service Cards (Floating with Micro-Animations) -->
+                            <div class="eq-orbit-card eq-orbit-ipo">
+                                <div class="oc-icon"><i class="ri-rocket-2-line"></i></div>
+                                <div class="oc-label">IPO</div>
                             </div>
 
-                            <!-- Interactive High-Tech Modern Equity Chart (100% Reliable & Guaranteed Render) -->
-                            <div class="eqm-canvas-wrap">
-                                <svg class="eqm-chart-svg" viewBox="0 0 520 170" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <!-- Gradient for SMIT Alpha Curve Area -->
-                                        <linearGradient id="eqAlphaAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.38" />
-                                            <stop offset="50%" stop-color="#2563c0" stop-opacity="0.12" />
-                                            <stop offset="100%" stop-color="#040a16" stop-opacity="0.0" />
-                                        </linearGradient>
-
-                                        <!-- Neon Line Gradient -->
-                                        <linearGradient id="eqAlphaLineGrad" x1="0" y1="0" x2="1" y2="0">
-                                            <stop offset="0%" stop-color="#2563c0" />
-                                            <stop offset="60%" stop-color="#38bdf8" />
-                                            <stop offset="100%" stop-color="#4ade80" />
-                                        </linearGradient>
-
-                                        <!-- Glow Filter -->
-                                        <filter id="eqGlow" x="-20%" y="-20%" width="140%" height="140%">
-                                            <feGaussianBlur stdDeviation="3.5" result="blur" />
-                                            <feMerge>
-                                                <feMergeNode in="blur" />
-                                                <feMergeNode in="SourceGraphic" />
-                                            </feMerge>
-                                        </filter>
-                                    </defs>
-
-                                    <!-- 1. Grid Lines & Price Ticks -->
-                                    <g stroke="rgba(74, 154, 224, 0.12)" stroke-width="1" stroke-dasharray="4,4">
-                                        <line x1="0" y1="35" x2="520" y2="35" />
-                                        <line x1="0" y1="75" x2="520" y2="75" />
-                                        <line x1="0" y1="115" x2="520" y2="115" />
-                                        <line x1="0" y1="155" x2="520" y2="155" />
-                                        <line x1="130" y1="0" x2="130" y2="170" />
-                                        <line x1="260" y1="0" x2="260" y2="170" />
-                                        <line x1="390" y1="0" x2="390" y2="170" />
-                                    </g>
-
-                                    <!-- Price Labels on Left -->
-                                    <text x="8" y="32" fill="rgba(148, 163, 184, 0.6)" font-size="9" font-family="'Urbanist', sans-serif" font-weight="700">₹24,850</text>
-                                    <text x="8" y="72" fill="rgba(148, 163, 184, 0.6)" font-size="9" font-family="'Urbanist', sans-serif" font-weight="700">₹24,600</text>
-                                    <text x="8" y="112" fill="rgba(148, 163, 184, 0.6)" font-size="9" font-family="'Urbanist', sans-serif" font-weight="700">₹24,350</text>
-                                    <text x="8" y="152" fill="rgba(148, 163, 184, 0.6)" font-size="9" font-family="'Urbanist', sans-serif" font-weight="700">₹24,100</text>
-
-                                    <!-- 2. Translucent Bottom Volume Histogram Pillars -->
-                                    <g fill="rgba(56, 189, 248, 0.18)">
-                                        <rect x="40" y="145" width="8" height="25" rx="2" />
-                                        <rect x="65" y="135" width="8" height="35" rx="2" fill="rgba(74, 222, 128, 0.22)" />
-                                        <rect x="90" y="140" width="8" height="30" rx="2" />
-                                        <rect x="115" y="125" width="8" height="45" rx="2" fill="rgba(74, 222, 128, 0.25)" />
-                                        <rect x="140" y="130" width="8" height="40" rx="2" />
-                                        <rect x="165" y="142" width="8" height="28" rx="2" />
-                                        <rect x="190" y="120" width="8" height="50" rx="2" fill="rgba(74, 222, 128, 0.28)" />
-                                        <rect x="215" y="135" width="8" height="35" rx="2" />
-                                        <rect x="240" y="115" width="8" height="55" rx="2" fill="rgba(74, 222, 128, 0.3)" />
-                                        <rect x="265" y="128" width="8" height="42" rx="2" />
-                                        <rect x="290" y="110" width="8" height="60" rx="2" fill="rgba(74, 222, 128, 0.32)" />
-                                        <rect x="315" y="125" width="8" height="45" rx="2" />
-                                        <rect x="340" y="105" width="8" height="65" rx="2" fill="rgba(74, 222, 128, 0.35)" />
-                                        <rect x="365" y="118" width="8" height="52" rx="2" />
-                                        <rect x="390" y="98" width="8" height="72" rx="2" fill="rgba(74, 222, 128, 0.38)" />
-                                        <rect x="415" y="112" width="8" height="58" rx="2" />
-                                        <rect x="440" y="90" width="8" height="80" rx="2" fill="rgba(74, 222, 128, 0.42)" />
-                                        <rect x="465" y="95" width="8" height="75" rx="2" />
-                                        <rect x="490" y="85" width="8" height="85" rx="2" fill="rgba(74, 222, 128, 0.45)" />
-                                    </g>
-
-                                    <!-- 3. Benchmark Comparison Curve (NIFTY 50) -->
-                                    <path d="M0,140 Q65,135 130,122 T260,105 T390,88 T520,72" 
-                                          fill="none" 
-                                          stroke="rgba(129, 140, 248, 0.45)" 
-                                          stroke-width="1.8" 
-                                          stroke-dasharray="5,4" />
-
-                                    <!-- 4. SMIT Alpha Strategy Area Fill -->
-                                    <path d="M0,135 C50,132 90,118 135,110 C185,102 220,85 270,72 C325,58 370,45 425,32 C465,22 495,20 520,18 L520,170 L0,170 Z" 
-                                          fill="url(#eqAlphaAreaGrad)" />
-
-                                    <!-- 5. SMIT Alpha Strategy Glowing Curve Line -->
-                                    <path d="M0,135 C50,132 90,118 135,110 C185,102 220,85 270,72 C325,58 370,45 425,32 C465,22 495,20 520,18" 
-                                          fill="none" 
-                                          stroke="url(#eqAlphaLineGrad)" 
-                                          stroke-width="3" 
-                                          stroke-linecap="round"
-                                          filter="url(#eqGlow)" 
-                                          class="eqm-pulse-line" />
-
-                                    <!-- 6. Floating Data Indicator Points -->
-                                    <!-- Mid breakout point -->
-                                    <circle cx="270" cy="72" r="4.5" fill="#38bdf8" stroke="#ffffff" stroke-width="1.5" />
-                                    
-                                    <!-- End Peak Live Target Beacon -->
-                                    <circle cx="520" cy="18" r="11" fill="rgba(74, 222, 128, 0.22)">
-                                        <animate attributeName="r" values="7;14;7" dur="2s" repeatCount="indefinite" />
-                                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite" />
-                                    </circle>
-                                    <circle cx="520" cy="18" r="6" fill="rgba(74, 222, 128, 0.6)" />
-                                    <circle cx="520" cy="18" r="3.5" fill="#ffffff" />
-                                </svg>
-
-                                <!-- Floating Live Data Badges inside Chart -->
-                                <div class="eqm-chart-tag eqm-tag-alpha">
-                                    <span class="eqm-dot-green"></span>
-                                    <span>SMIT Alpha: <strong>+28.4% YTD</strong></span>
-                                </div>
-
-                                <div class="eqm-chart-tag eqm-tag-nifty">
-                                    <span style="color:#818cf8;">●</span>
-                                    <span>Nifty 50: <strong>+14.2%</strong></span>
-                                </div>
+                            <div class="eq-orbit-card eq-orbit-trading">
+                                <div class="oc-icon"><i class="ri-bar-chart-2-line"></i></div>
+                                <div class="oc-label">Stock<br>Trading</div>
                             </div>
 
-                            <!-- Sector Weightage Allocation -->
-                            <div class="eqm-sectors-grid">
-                                <div class="eqm-sec-item">
-                                    <div class="eqm-sec-name">Banking</div>
-                                    <div class="eqm-sec-val" style="color:#38bdf8;">32.5%</div>
-                                </div>
-                                <div class="eqm-sec-item">
-                                    <div class="eqm-sec-name">Tech / IT</div>
-                                    <div class="eqm-sec-val" style="color:#818cf8;">24.0%</div>
-                                </div>
-                                <div class="eqm-sec-item">
-                                    <div class="eqm-sec-name">Infra / Auto</div>
-                                    <div class="eqm-sec-val" style="color:#4ade80;">22.5%</div>
-                                </div>
-                                <div class="eqm-sec-item">
-                                    <div class="eqm-sec-name">Energy</div>
-                                    <div class="eqm-sec-val" style="color:#c084fc;">21.0%</div>
-                                </div>
+                            <div class="eq-orbit-card eq-orbit-mf">
+                                <div class="oc-icon"><i class="ri-safe-2-line"></i></div>
+                                <div class="oc-label">Mutual Fund<br>Distribution</div>
                             </div>
 
-                            <!-- Curated Micro Ticker Strip -->
-                            <div class="eqm-mini-ticker">
-                                <div class="eqm-mini-item">
-                                    <strong>RELIANCE</strong> ₹2,984.50 <span class="eqm-mini-gain">▲ +2.1%</span>
+                            <div class="eq-orbit-card eq-orbit-wealth">
+                                <div class="oc-icon"><i class="ri-briefcase-4-line"></i></div>
+                                <div class="oc-label">Wealth<br>Management</div>
+                            </div>
+
+                            <div class="eq-orbit-card eq-orbit-advisory">
+                                <div class="oc-icon"><i class="ri-user-star-line"></i></div>
+                                <div class="oc-label">Investment<br>Advisory</div>
+                            </div>
+
+                            <!-- Central Smartphone Device Frame (Interactive Live Portfolio) -->
+                            <div class="eq-phone-device-wrap">
+                                <div class="eq-phone-chassis">
+                                    <!-- Dynamic Island / Speaker Top Notch -->
+                                    <div class="eq-phone-notch">
+                                        <span class="eq-phone-camera"></span>
+                                        <span class="eq-phone-speaker"></span>
+                                    </div>
+
+                                    <!-- Phone Screen Content -->
+                                    <div class="eq-phone-screen">
+                                        <!-- App Header -->
+                                        <div class="eq-app-header">
+                                            <span class="eq-app-title">Portfolio</span>
+                                            <span class="eq-app-live-chip"><span class="pulse-dot"></span> LIVE</span>
+                                        </div>
+
+                                        <!-- Summary Metrics Grid -->
+                                        <div class="eq-portfolio-metrics">
+                                            <div class="eq-pm-col">
+                                                <span class="eq-pm-lbl">Invested</span>
+                                                <span class="eq-pm-val">₹68,542</span>
+                                            </div>
+                                            <div class="eq-pm-col text-right">
+                                                <span class="eq-pm-lbl">Overall Profit</span>
+                                                <span class="eq-pm-val text-green">₹17,930 <small>(+26.16%)</small></span>
+                                            </div>
+                                            <div class="eq-pm-col">
+                                                <span class="eq-pm-lbl">Current</span>
+                                                <span class="eq-pm-val">₹1,09,508</span>
+                                            </div>
+                                            <div class="eq-pm-col text-right">
+                                                <span class="eq-pm-lbl">Today's Profit</span>
+                                                <span class="eq-pm-val text-green">₹2,212 <small>(+3.23%)</small></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tabs: POSITIONS / HOLDINGS -->
+                                        <div class="eq-portfolio-tabs">
+                                            <button class="eq-p-tab" id="eqTabPosBtn2" onclick="switchEqPhoneTab('pos')">POSITIONS</button>
+                                            <button class="eq-p-tab active" id="eqTabHoldBtn2" onclick="switchEqPhoneTab('hold')">HOLDINGS</button>
+                                        </div>
+
+                                        <!-- Search Bar inside App -->
+                                        <div class="eq-app-search-bar">
+                                            <i class="ri-search-2-line"></i>
+                                            <span>Search holdings...</span>
+                                            <i class="ri-equalizer-line eq-app-filter-icon"></i>
+                                        </div>
+
+                                        <!-- Stock Holdings List (Scrollable) -->
+                                        <div class="eq-holdings-list" id="eqHoldingsList2">
+                                            <!-- ASTRAL -->
+                                            <div class="eq-holding-row">
+                                                <div class="eq-hr-left">
+                                                    <div class="eq-hr-symbol">ASTRAL EQ</div>
+                                                    <div class="eq-hr-sub">Invested <strong>₹12,417</strong></div>
+                                                </div>
+                                                <div class="eq-hr-mid">
+                                                    <span class="eq-hr-qty-badge">Qty <strong>10</strong></span>
+                                                </div>
+                                                <div class="eq-hr-right">
+                                                    <div class="eq-hr-profit" style="color: #16a34a;">+₹987 (7.95%)</div>
+                                                    <div class="eq-hr-ltp">LTP <strong>₹1,340.45</strong></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- AWL -->
+                                            <div class="eq-holding-row">
+                                                <div class="eq-hr-left">
+                                                    <div class="eq-hr-symbol">AWL EQ</div>
+                                                    <div class="eq-hr-sub">Invested <strong>₹5,111</strong></div>
+                                                </div>
+                                                <div class="eq-hr-mid">
+                                                    <span class="eq-hr-qty-badge">Qty <strong>10</strong></span>
+                                                </div>
+                                                <div class="eq-hr-right">
+                                                    <div class="eq-hr-profit" style="color: #dc2626;">-₹1,052 (-20.59%)</div>
+                                                    <div class="eq-hr-ltp">LTP <strong>₹405.85</strong></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- BAJAJFINSV -->
+                                            <div class="eq-holding-row">
+                                                <div class="eq-hr-left">
+                                                    <div class="eq-hr-symbol">BAJAJFINSV EQ</div>
+                                                    <div class="eq-hr-sub">Invested <strong>₹2,490</strong></div>
+                                                </div>
+                                                <div class="eq-hr-mid">
+                                                    <span class="eq-hr-qty-badge">Qty <strong>2</strong></span>
+                                                </div>
+                                                <div class="eq-hr-right">
+                                                    <div class="eq-hr-profit" style="color: #16a34a;">+₹21.90 (0.79%)</div>
+                                                    <div class="eq-hr-ltp">LTP <strong>₹1,255.95</strong></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- BAJFINANCE -->
+                                            <div class="eq-holding-row">
+                                                <div class="eq-hr-left">
+                                                    <div class="eq-hr-symbol">BAJFINANCE EQ</div>
+                                                    <div class="eq-hr-sub">Invested <strong>₹5,625</strong></div>
+                                                </div>
+                                                <div class="eq-hr-mid">
+                                                    <span class="eq-hr-qty-badge">Qty <strong>1</strong></span>
+                                                </div>
+                                                <div class="eq-hr-right">
+                                                    <div class="eq-hr-profit" style="color: #16a34a;">+₹7.20 (0.12%)</div>
+                                                    <div class="eq-hr-ltp">LTP <strong>₹5,632.20</strong></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- BANDHANBNK -->
+                                            <div class="eq-holding-row">
+                                                <div class="eq-hr-left">
+                                                    <div class="eq-hr-symbol">BANDHANBNK EQ</div>
+                                                    <div class="eq-hr-sub">Invested <strong>₹1,640</strong></div>
+                                                </div>
+                                                <div class="eq-hr-mid">
+                                                    <span class="eq-hr-qty-badge">Qty <strong>8</strong></span>
+                                                </div>
+                                                <div class="eq-hr-right">
+                                                    <div class="eq-hr-profit" style="color: #16a34a;">+₹84.00 (5.40%)</div>
+                                                    <div class="eq-hr-ltp">LTP <strong>₹215.50</strong></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- RELIANCE -->
+                                            <div class="eq-holding-row">
+                                                <div class="eq-hr-left">
+                                                    <div class="eq-hr-symbol">RELIANCE EQ</div>
+                                                    <div class="eq-hr-sub">Invested <strong>₹29,845</strong></div>
+                                                </div>
+                                                <div class="eq-hr-mid">
+                                                    <span class="eq-hr-qty-badge">Qty <strong>10</strong></span>
+                                                </div>
+                                                <div class="eq-hr-right">
+                                                    <div class="eq-hr-profit" style="color: #16a34a;">+₹3,420 (12.95%)</div>
+                                                    <div class="eq-hr-ltp">LTP <strong>₹29,845.00</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Positions List (Hidden by default) -->
+                                        <div class="eq-holdings-list" id="eqPositionsList2" style="display: none;">
+                                            <div class="eq-holding-row">
+                                                <div class="eq-hr-left">
+                                                    <div class="eq-hr-symbol">NIFTY 24800 CE</div>
+                                                    <div class="eq-hr-sub">Intraday <strong>NRML</strong></div>
+                                                </div>
+                                                <div class="eq-hr-mid">
+                                                    <span class="eq-hr-qty-badge">Qty <strong>75</strong></span>
+                                                </div>
+                                                <div class="eq-hr-right">
+                                                    <div class="eq-hr-profit" style="color: #16a34a;">+₹1,425.00</div>
+                                                    <div class="eq-hr-ltp">LTP <strong>₹142.50</strong></div>
+                                                </div>
+                                            </div>
+                                            <div class="eq-holding-row">
+                                                <div class="eq-hr-left">
+                                                    <div class="eq-hr-symbol">BANKNIFTY 52000 PE</div>
+                                                    <div class="eq-hr-sub">Intraday <strong>MIS</strong></div>
+                                                </div>
+                                                <div class="eq-hr-mid">
+                                                    <span class="eq-hr-qty-badge">Qty <strong>30</strong></span>
+                                                </div>
+                                                <div class="eq-hr-right">
+                                                    <div class="eq-hr-profit" style="color: #16a34a;">+₹787.50</div>
+                                                    <div class="eq-hr-ltp">LTP <strong>₹262.50</strong></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bottom Home Bar -->
+                                        <div class="eq-phone-home-indicator"></div>
+                                    </div>
                                 </div>
-                                <div class="eqm-mini-item">
-                                    <strong>HDFCBANK</strong> ₹1,648.20 <span class="eqm-mini-gain">▲ +1.8%</span>
-                                </div>
-                                <div class="eqm-mini-item">
-                                    <strong>TCS</strong> ₹4,152.00 <span class="eqm-mini-gain">▲ +1.4%</span>
-                                </div>
+
+                                <!-- Ambient Glow beneath Phone -->
+                                <div class="eq-phone-shadow-glow"></div>
                             </div>
 
                         </div>
@@ -1820,7 +2348,7 @@
 
                         <div class="features">
                             <div class="feature reveal">
-                                <div class="feat-icon" aria-hidden="true">📱</div>
+                                <div class="feat-icon" aria-hidden="true"><i class="ri-phone-find-line"></i></div>
                                 <div>
                                     <div class="feat-title">Relationship First</div>
                                     <div class="feat-desc">We believe meaningful financial relationships are built
@@ -1831,7 +2359,7 @@
                                 </div>
                             </div>
                             <div class="feature reveal d1">
-                                <div class="feat-icon" aria-hidden="true">🔬</div>
+                                <div class="feat-icon" aria-hidden="true"><i class="ri-lightbulb-flash-line"></i></div>
                                 <div>
                                     <div class="feat-title">Clarity Over Complexity</div>
                                     <div class="feat-desc">Financial markets can be complicated. We aim to make
@@ -1840,7 +2368,7 @@
                                 </div>
                             </div>
                             <div class="feature reveal d2">
-                                <div class="feat-icon" aria-hidden="true">🎓 </div>
+                                <div class="feat-icon" aria-hidden="true"><i class="ri-compass-3-line"></i></div>
                                 <div>
                                     <div class="feat-title">Opportunity With Perspective</div>
                                     <div class="feat-desc">Not every opportunity is the right opportunity. Understanding
@@ -1850,7 +2378,7 @@
                                 </div>
                             </div>
                             <div class="feature reveal d3">
-                                <div class="feat-icon" aria-hidden="true">🛡️</div>
+                                <div class="feat-icon" aria-hidden="true"><i class="ri-shield-star-line"></i></div>
                                 <div>
                                     <div class="feat-title">Long-term Thinking</div>
                                     <div class="feat-desc">Markets move every day. Building meaningful wealth requires a
@@ -2028,7 +2556,7 @@
                                 <span class="bni-live-dot" aria-hidden="true"></span>
                                 <span>Active Network Hub</span>
                             </div>
-                            <div class="bni-badge-loc">📍 Gondal &amp; Rajkot</div>
+                            <div class="bni-badge-loc"><i class="ri-map-pin-line"></i> Gondal &amp; Rajkot</div>
                         </div>
 
                         <!-- Center Interactive Ecosystem Grid -->
@@ -2234,19 +2762,18 @@
                                 <a href="contact.html" class="btn btn-primary btn-lg cta-btn-glow">
                                     Talk to SMIT Securities
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-                                        <path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="currentColor" stroke-width="1.8"
-                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M3.5 9h11M10 5l4.5 4L10 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </a>
-                                <a href="tel:+919999999999" class="btn btn-ghost btn-lg">
-                                    <span>📞 Call Us Now</span>
+                                <a href="contact.html" class="btn btn-ghost btn-lg">
+                                    <span><i class="ri-phone-fill"></i> Call Us Now</span>
                                 </a>
                             </div>
                         </div>
                         <div class="cta-micro-trust reveal d4">
-                            <span>✓ Direct Regional Advisory</span>
-                            <span>✓ SEBI Regulated Ecosystem</span>
-                            <span>✓ Gondal &amp; Rajkot Hubs</span>
+                            <span><i class="ri-check-double-line"></i> Direct Regional Advisory</span>
+                            <span><i class="ri-shield-check-line"></i> SEBI Regulated Ecosystem</span>
+                            <span><i class="ri-map-pin-2-line"></i> Gondal &amp; Rajkot Hubs</span>
                         </div>
                     </div>
 
@@ -2406,17 +2933,17 @@
 
                         <!-- Regional Hubs -->
                         <div class="footer-locations-inline">
-                            <span>📍</span>
+                            <span><i class="ri-map-pin-line"></i></span>
                             <a href="contact.html#locations">Gondal</a>
                             <span style="color: rgba(74, 154, 224, 0.4);">|</span>
                             <a href="contact.html#locations">Rajkot</a>
                         </div>
 
                         <div class="social-row">
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="soc" title="Twitter/X" aria-label="Twitter">𝕏</a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="soc" title="LinkedIn" aria-label="LinkedIn">in</a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="soc" title="Facebook" aria-label="Facebook">f</a>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="soc" title="YouTube" aria-label="YouTube">▶</a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="soc" title="Twitter/X" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="soc" title="LinkedIn" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="soc" title="Facebook" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="soc" title="YouTube" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
                         </div>
                     </div>
 
@@ -2455,14 +2982,14 @@
                     <div class="footer-col">
                         <h4>Connect</h4>
                         <ul class="footer-links">
-                            <li><a href="contact.html#locations">📍 Gondal Desk</a></li>
-                            <li><a href="contact.html#locations">📍 Rajkot Desk</a></li>
-                            <li><a href="tel:+919825219469">📞 +91 98252 19469</a></li>
-                            <li><a href="mailto:info@smitsecurities.com">✉ info@smitsecurities.com</a></li>
-                            <li><a href="contact.html#locations">🕐 Mon–Sat: 9 AM – 6 PM</a></li>
+                            <li><a href="contact.html#locations"><i class="ri-map-pin-line"></i> Gondal Desk</a></li>
+                            <li><a href="contact.html#locations"><i class="ri-map-pin-line"></i> Rajkot Desk</a></li>
+                            <li><a href="tel:+919825219469"><i class="ri-phone-line"></i> +91 98252 19469</a></li>
+                            <li><a href="mailto:info@smitsecurities.com"><i class="ri-mail-line"></i> info@smitsecurities.com</a></li>
+                            <li><a href="contact.html#locations"><i class="ri-time-line"></i> Mon–Sat: 9 AM – 6 PM</a></li>
                         </ul>
                         <div style="margin-top: 18px">
-                            <div class="sebi-chip">🏛️ SEBI Reg: INZ000213837</div>
+                            <div class="sebi-chip"><i class="ri-government-line"></i> SEBI Reg: INZ000213837</div>
                         </div>
                     </div>
 
@@ -2475,9 +3002,7 @@
                         <a href="about.html">Terms of Use</a> &nbsp;|&nbsp;
                         <a href="about.html">Disclaimer</a>
                     </p>
-                    <p>⚠️ Investments are subject to market risks. Please read all scheme-related documents carefully
-                        before
-                        investing.</p>
+                    <p><i class="ri-alert-line" style="color: #f59e0b; margin-right: 4px;"></i> Investments are subject to market risks. Please read all scheme-related documents carefully before investing.</p>
                 </div>
             </div>
         </footer>
@@ -2499,274 +3024,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/home-animations.js"></script>
-<!-- High-Performance Ultra-Smooth Silky Live Share Market Chart Engine -->
     <script>
-        (function () {
-            const canvas = document.getElementById('terminalMarketCanvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
 
-            let width, height;
-            function resizeCanvas() {
-                const rect = canvas.getBoundingClientRect();
-                const dpr = window.devicePixelRatio || 1;
-                width = rect.width;
-                height = rect.height;
-                canvas.width = width * dpr;
-                canvas.height = height * dpr;
-                ctx.scale(dpr, dpr);
+        // Interactive Phone Tab Switcher (POSITIONS / HOLDINGS)
+        function switchPhoneTab(tab) {
+            const tabPosBtn = document.getElementById('tabPosBtn');
+            const tabHoldBtn = document.getElementById('tabHoldBtn');
+            const holdingsList = document.getElementById('holdingsList');
+            const positionsList = document.getElementById('positionsList');
+
+            if (tab === 'pos') {
+                if (tabPosBtn) tabPosBtn.classList.add('active');
+                if (tabHoldBtn) tabHoldBtn.classList.remove('active');
+                if (positionsList) positionsList.style.display = 'flex';
+                if (holdingsList) holdingsList.style.display = 'none';
+            } else {
+                if (tabHoldBtn) tabHoldBtn.classList.add('active');
+                if (tabPosBtn) tabPosBtn.classList.remove('active');
+                if (holdingsList) holdingsList.style.display = 'flex';
+                if (positionsList) positionsList.style.display = 'none';
             }
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
-
-            // Market Data Presets
-            const indexData = {
-                nifty: { base: 24840.50, change: '+348.20 (+1.42%)', high: '₹24,895.10', low: '₹24,510.30', vol: '48.2M', prefix: '₹' },
-                sensex: { base: 81350.20, change: '+1,028.40 (+1.28%)', high: '₹81,520.00', low: '₹80,410.50', vol: '62.4M', prefix: '₹' },
-                banknifty: { base: 53210.15, change: '+498.80 (+0.95%)', high: '₹53,390.00', low: '₹52,780.20', vol: '31.8M', prefix: '₹' },
-                alpha: { base: 1840.80, change: '+28.4% (YTD Alpha)', high: '1,890.00', low: '1,420.00', vol: '22.5M', prefix: '' }
-            };
-
-            let currentIndex = 'nifty';
-            const priceValEl = document.getElementById('tLivePrice');
-            const changePillEl = document.getElementById('tLiveChange');
-            const statHighEl = document.getElementById('tStatHigh');
-            const statLowEl = document.getElementById('tStatLow');
-            const statVolEl = document.getElementById('tStatVol');
-
-            // Baseline Points Generation (Organic Bullish Trajectory)
-            const pointCount = 70;
-            let basePoints = [];
-            for (let i = 0; i < pointCount; i++) {
-                const progress = i / (pointCount - 1);
-                const trend = Math.sin(progress * Math.PI * 1.35) * 0.28 + (progress * 0.62);
-                const harmonic = (Math.sin(i * 0.4) * 0.04) + (Math.cos(i * 0.8) * 0.025);
-                basePoints.push(Math.max(0.15, Math.min(0.88, 0.22 + trend * 0.56 + harmonic)));
-            }
-
-            let currentPoints = [...basePoints];
-            let tick = 0;
-            let currentPrice = indexData.nifty.base;
-            let targetPrice = currentPrice;
-
-            // Switch Index Tabs
-            document.querySelectorAll('.index-tab-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.index-tab-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    currentIndex = btn.dataset.index;
-                    const d = indexData[currentIndex];
-                    currentPrice = d.base;
-                    targetPrice = d.base;
-                    priceValEl.textContent = (d.prefix ? d.prefix : '') + d.base.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                    changePillEl.textContent = '▲ ' + d.change;
-                    statHighEl.textContent = d.high;
-                    statLowEl.textContent = d.low;
-                    statVolEl.textContent = d.vol;
-                });
-            });
-
-            // Timeframe Pills
-            document.querySelectorAll('.tf-pill-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelectorAll('.tf-pill-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                });
-            });
-
-            // Interactive Mouse Crosshair
-            let mouseX = -1;
-            let mouseY = -1;
-            canvas.addEventListener('mousemove', (e) => {
-                const rect = canvas.getBoundingClientRect();
-                mouseX = e.clientX - rect.left;
-                mouseY = e.clientY - rect.top;
-            });
-            canvas.addEventListener('mouseleave', () => {
-                mouseX = -1;
-                mouseY = -1;
-            });
-
-            // Ultra-Smooth Animation Loop (Damped Physics, Silky Movement)
-            function drawChart() {
-                // Slower, elegant, gentle tick progression
-                tick += 0.007;
-
-                // Ultra-smooth tranquil breathing at the live market tip (No jitter)
-                const lastIdx = pointCount - 1;
-                const gentleTipBreath = Math.sin(tick * 1.1) * 0.018;
-                
-                for (let i = 0; i < pointCount; i++) {
-                    const wavePhase = Math.sin(tick * 0.9 + i * 0.12) * 0.004;
-                    const targetVal = basePoints[i] + wavePhase + (i === lastIdx ? gentleTipBreath : 0);
-                    // Smooth lerp easing (0.04 factor gives silky liquid motion)
-                    currentPoints[i] += (targetVal - currentPoints[i]) * 0.04;
-                }
-
-                // Smooth gradual price ticker ease
-                if (Math.random() < 0.02) {
-                    const delta = (Math.random() - 0.47) * 1.5;
-                    targetPrice += delta;
-                }
-                currentPrice += (targetPrice - currentPrice) * 0.03;
-                const d = indexData[currentIndex];
-                priceValEl.textContent = (d.prefix ? d.prefix : '') + currentPrice.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-
-                ctx.clearRect(0, 0, width, height);
-
-                // 1. Subtle High-Tech Grid Lines
-                ctx.strokeStyle = 'rgba(74, 154, 224, 0.065)';
-                ctx.lineWidth = 1;
-                ctx.setLineDash([4, 4]);
-
-                const gridRows = 5;
-                for (let i = 1; i < gridRows; i++) {
-                    const y = (height / gridRows) * i;
-                    ctx.beginPath();
-                    ctx.moveTo(0, y);
-                    ctx.lineTo(width, y);
-                    ctx.stroke();
-                }
-
-                const gridCols = 8;
-                for (let i = 1; i < gridCols; i++) {
-                    const x = (width / gridCols) * i;
-                    ctx.beginPath();
-                    ctx.moveTo(x, 0);
-                    ctx.lineTo(x, height);
-                    ctx.stroke();
-                }
-                ctx.setLineDash([]);
-
-                // 2. Translucent Bottom Volume Pillars (Gentle Pulse)
-                const pillarCount = 32;
-                const pStep = width / pillarCount;
-                for (let i = 0; i < pillarCount; i++) {
-                    const pH = (Math.sin(tick * 0.4 + i * 0.25) * 0.1 + 0.28) * 45;
-                    const px = i * pStep + 3;
-                    const pw = pStep - 6;
-                    ctx.fillStyle = i % 2 === 0 ? 'rgba(56, 189, 248, 0.16)' : 'rgba(74, 222, 128, 0.18)';
-                    ctx.beginPath();
-                    ctx.roundRect(px, height - pH, pw, pH, 3);
-                    ctx.fill();
-                }
-
-                // Coordinates
-                const coords = [];
-                const stepX = width / (pointCount - 1);
-                for (let i = 0; i < pointCount; i++) {
-                    const x = i * stepX;
-                    const y = height - (currentPoints[i] * (height - 50) + 25);
-                    coords.push({ x, y });
-                }
-
-                // 3. Volumetric Glowing Area Mesh
-                const areaGradient = ctx.createLinearGradient(0, 0, 0, height);
-                areaGradient.addColorStop(0, 'rgba(56, 189, 248, 0.28)');
-                areaGradient.addColorStop(0.5, 'rgba(37, 99, 192, 0.10)');
-                areaGradient.addColorStop(1, 'rgba(6, 14, 26, 0.0)');
-
-                ctx.beginPath();
-                ctx.moveTo(coords[0].x, height);
-                ctx.lineTo(coords[0].x, coords[0].y);
-
-                for (let i = 0; i < coords.length - 1; i++) {
-                    const cpX = (coords[i].x + coords[i + 1].x) / 2;
-                    ctx.quadraticCurveTo(coords[i].x, coords[i].y, cpX, (coords[i].y + coords[i + 1].y) / 2);
-                }
-                ctx.lineTo(coords[coords.length - 1].x, coords[coords.length - 1].y);
-                ctx.lineTo(coords[coords.length - 1].x, height);
-                ctx.closePath();
-                ctx.fillStyle = areaGradient;
-                ctx.fill();
-
-                // 4. Neon Glowing Trend Line
-                ctx.save();
-                ctx.shadowColor = '#38bdf8';
-                ctx.shadowBlur = 14;
-                ctx.strokeStyle = '#38bdf8';
-                ctx.lineWidth = 3.2;
-                ctx.lineCap = 'round';
-                ctx.lineJoin = 'round';
-
-                ctx.beginPath();
-                ctx.moveTo(coords[0].x, coords[0].y);
-                for (let i = 0; i < coords.length - 1; i++) {
-                    const cpX = (coords[i].x + coords[i + 1].x) / 2;
-                    ctx.quadraticCurveTo(coords[i].x, coords[i].y, cpX, (coords[i].y + coords[i + 1].y) / 2);
-                }
-                ctx.lineTo(coords[coords.length - 1].x, coords[coords.length - 1].y);
-                ctx.stroke();
-                ctx.restore();
-
-                // 5. Flashing Live Breakout Beacon (Smooth Calm Breathing Pulse)
-                const lastPoint = coords[coords.length - 1];
-                const beaconPulse = Math.sin(tick * 1.8) * 2.5 + 6.5;
-
-                ctx.beginPath();
-                ctx.arc(lastPoint.x, lastPoint.y, beaconPulse + 6, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(56, 189, 248, 0.18)';
-                ctx.fill();
-
-                ctx.beginPath();
-                ctx.arc(lastPoint.x, lastPoint.y, beaconPulse, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(74, 222, 128, 0.5)';
-                ctx.fill();
-
-                ctx.beginPath();
-                ctx.arc(lastPoint.x, lastPoint.y, 4.5, 0, Math.PI * 2);
-                ctx.fillStyle = '#ffffff';
-                ctx.shadowColor = '#4ade80';
-                ctx.shadowBlur = 10;
-                ctx.fill();
-
-                // 6. Interactive Mouse Crosshair & Tooltip
-                if (mouseX >= 0 && mouseX <= width) {
-                    const indexAtMouse = Math.min(coords.length - 1, Math.max(0, Math.round((mouseX / width) * (coords.length - 1))));
-                    const hoverPt = coords[indexAtMouse];
-
-                    ctx.save();
-                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.28)';
-                    ctx.lineWidth = 1;
-                    ctx.setLineDash([3, 3]);
-                    ctx.beginPath();
-                    ctx.moveTo(hoverPt.x, 0);
-                    ctx.lineTo(hoverPt.x, height);
-                    ctx.stroke();
-                    ctx.restore();
-
-                    ctx.beginPath();
-                    ctx.arc(hoverPt.x, hoverPt.y, 5.5, 0, Math.PI * 2);
-                    ctx.fillStyle = '#38bdf8';
-                    ctx.shadowColor = '#38bdf8';
-                    ctx.shadowBlur = 10;
-                    ctx.fill();
-
-                    const tooltipText = (d.prefix ? d.prefix : '') + (currentPrice * (1 + (currentPoints[indexAtMouse] - 0.5) * 0.02)).toFixed(2);
-                    ctx.font = 'bold 12px "Urbanist", sans-serif';
-                    const textWidth = ctx.measureText(tooltipText).width;
-                    const pillW = textWidth + 18;
-                    const pillH = 26;
-                    const pillX = Math.min(width - pillW - 6, Math.max(6, hoverPt.x - pillW / 2));
-                    const pillY = Math.max(8, hoverPt.y - 36);
-
-                    ctx.fillStyle = 'rgba(7, 17, 31, 0.95)';
-                    ctx.strokeStyle = '#38bdf8';
-                    ctx.lineWidth = 1.2;
-                    ctx.beginPath();
-                    ctx.roundRect(pillX, pillY, pillW, pillH, 6);
-                    ctx.fill();
-                    ctx.stroke();
-
-                    ctx.fillStyle = '#ffffff';
-                    ctx.fillText(tooltipText, pillX + 9, pillY + 17);
-                }
-
-                requestAnimationFrame(drawChart);
-            }
-
-            requestAnimationFrame(drawChart);
-        })();
+        }
     </script>
 </body>
 

@@ -268,4 +268,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/* ============================================================
+   EQUITY SECTION: INTERACTIVE SMARTPHONE TAB SWITCHER
+============================================================ */
+function switchEqPhoneTab(tab) {
+    const tabPosBtn = document.getElementById('eqTabPosBtn');
+    const tabHoldBtn = document.getElementById('eqTabHoldBtn');
+    const holdingsList = document.getElementById('eqHoldingsList');
+    const positionsList = document.getElementById('eqPositionsList');
+
+    if (tab === 'pos') {
+        if (tabPosBtn) tabPosBtn.classList.add('active');
+        if (tabHoldBtn) tabHoldBtn.classList.remove('active');
+        if (positionsList) positionsList.style.display = 'flex';
+        if (holdingsList) holdingsList.style.display = 'none';
+    } else {
+        if (tabHoldBtn) tabHoldBtn.classList.add('active');
+        if (tabPosBtn) tabPosBtn.classList.remove('active');
+        if (holdingsList) holdingsList.style.display = 'flex';
+        if (positionsList) positionsList.style.display = 'none';
+    }
+}
+
+
 

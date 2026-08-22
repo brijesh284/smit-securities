@@ -36,8 +36,10 @@
 
     <!-- Google Fonts: Exo (Titles) & Urbanist (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Remix Icons (Modern Vector Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
 
     <!-- Master CSS -->
     <link rel="stylesheet" href="css/styles.css">
@@ -101,7 +103,7 @@
      MOBILE MENU OVERLAY
 =================================================== -->
     <div class="mob-menu" id="mobMenu" role="navigation" aria-label="Mobile navigation">
-        <button class="mob-close" onclick="closeMob()" aria-label="Close menu">✕</button>
+        <button class="mob-close" onclick="closeMob()" aria-label="Close menu"><i class="ri-close-line"></i></button>
         <a href="index.html" onclick="closeMob()">Home</a>
         <a href="about.html" onclick="closeMob()">About Us</a>
         <a href="service.html" class="active-link" onclick="closeMob()">Service</a>
@@ -165,7 +167,7 @@
             <div class="new-hiro-inner">
                 <div class="hero-badge reveal">
                     <span class="badge-pulse"></span>
-                    <span class="badge-txt">💼 OUR SERVICES</span>
+                    <span class="badge-txt"><i class="ri-briefcase-4-line"></i> OUR SERVICES</span>
                 </div>
 
                 <h1 class="hero-h1">
@@ -180,9 +182,9 @@
 
                 <div class="trust-strip reveal d3">
                     <span class="trust-lbl">Explore Offerings:</span>
-                    <a href="#featured-equity" class="trust-chip">📈 Equity Markets</a>
-                    <a href="#service-grid" class="trust-chip">📊 Core Service Grid (9 Offerings)</a>
-                    <a href="#specialized-services" class="trust-chip">🚀 Specialized Pre-IPO &amp; Capital</a>
+                    <a href="#featured-equity" class="trust-chip"><i class="ri-line-chart-line"></i> Equity Markets</a>
+                    <a href="#service-grid" class="trust-chip"><i class="ri-grid-fill"></i> Core Service Grid (9 Offerings)</a>
+                    <a href="#specialized-services" class="trust-chip"><i class="ri-rocket-line"></i> Specialized Pre-IPO &amp; Capital</a>
                 </div>
             </div>
         </div>
@@ -208,9 +210,9 @@
 
                         <!-- Exchange Badges -->
                         <div class="exchange-badge-group">
-                            <span class="exchange-badge">🏛️ NSE</span>
-                            <span class="exchange-badge">🏛️ BSE</span>
-                            <span class="exchange-badge">🏛️ MSEI</span>
+                            <span class="exchange-badge"><i class="ri-bank-line"></i> NSE</span>
+                            <span class="exchange-badge"><i class="ri-bank-line"></i> BSE</span>
+                            <span class="exchange-badge"><i class="ri-bank-line"></i> MSEI</span>
                         </div>
 
                         <p class="story-paras">
@@ -310,7 +312,7 @@
 
                     <!-- 1. DERIVATIVES -->
                     <div class="sg-card reveal d1">
-                        <div class="sg-icon">⚡</div>
+                        <div class="sg-icon"><i class="ri-pulse-line"></i></div>
                         <div class="sg-title">DERIVATIVES</div>
                         <div class="sg-desc">Explore derivative instruments for sophisticated market participation,
                             hedging, and disciplined risk-management strategies across Futures &amp; Options.</div>
@@ -319,7 +321,7 @@
 
                     <!-- 2. MUTUAL FUNDS -->
                     <div class="sg-card reveal d2">
-                        <div class="sg-icon">🌱</div>
+                        <div class="sg-icon"><i class="ri-funds-box-line"></i></div>
                         <div class="sg-title">MUTUAL FUNDS</div>
                         <div class="sg-desc">Access diversified investment solutions designed around different
                             investment objectives, time horizons, and risk considerations with systematic SIPs.</div>
@@ -328,7 +330,7 @@
 
                     <!-- 3. PRIVATE EQUITY -->
                     <div class="sg-card reveal d3">
-                        <div class="sg-icon">💎</div>
+                        <div class="sg-icon"><i class="ri-vip-diamond-line"></i></div>
                         <div class="sg-title">PRIVATE EQUITY</div>
                         <div class="sg-desc">Explore curated wealth opportunities beyond traditional listed markets,
                             subject to investor eligibility and portfolio suitability.</div>
@@ -337,7 +339,7 @@
 
                     <!-- 4. MCX -->
                     <div class="sg-card reveal d1">
-                        <div class="sg-icon">🪙</div>
+                        <div class="sg-icon"><i class="ri-copper-coin-line"></i></div>
                         <div class="sg-title">MCX (COMMODITIES)</div>
                         <div class="sg-desc">Participate in dynamic commodity markets through MCX, including precious
                             metals, energy, and agri-commodities for optimal portfolio hedging.</div>
@@ -346,7 +348,7 @@
 
                     <!-- 5. IPOs -->
                     <div class="sg-card reveal d2">
-                        <div class="sg-icon">🎯</div>
+                        <div class="sg-icon"><i class="ri-focus-2-line"></i></div>
                         <div class="sg-title">IPOs</div>
                         <div class="sg-desc">Explore opportunities to participate in new public offerings with an
                             informed, research-backed perspective and seamless digital bidding.</div>
@@ -355,7 +357,7 @@
 
                     <!-- 6. BONDS -->
                     <div class="sg-card reveal d3">
-                        <div class="sg-icon">🛡️</div>
+                        <div class="sg-icon"><i class="ri-shield-flash-line"></i></div>
                         <div class="sg-title">BONDS</div>
                         <div class="sg-desc">Explore fixed-income investment opportunities as part of a diversified
                             financial strategy for stable, predictable yield and capital preservation.</div>
@@ -364,7 +366,7 @@
 
                     <!-- 7. DEBENTURES -->
                     <div class="sg-card reveal d1">
-                        <div class="sg-icon">📜</div>
+                        <div class="sg-icon"><i class="ri-file-list-3-line"></i></div>
                         <div class="sg-title">DEBENTURES</div>
                         <div class="sg-desc">Understand debt-oriented opportunities and their associated considerations,
                             providing institutional-grade debt yields and structured returns.</div>
@@ -373,7 +375,7 @@
 
                     <!-- 8. ETFs -->
                     <div class="sg-card reveal d2">
-                        <div class="sg-icon">📊</div>
+                        <div class="sg-icon"><i class="ri-pie-chart-line"></i></div>
                         <div class="sg-title">ETFs</div>
                         <div class="sg-desc">Gain diversified, low-cost market exposure through exchange-traded
                             investment products tracking major indices, sectors, and commodities.</div>
@@ -382,7 +384,7 @@
 
                     <!-- 9. MTF -->
                     <div class="sg-card reveal d3">
-                        <div class="sg-icon">⚖️</div>
+                        <div class="sg-icon"><i class="ri-scales-3-line"></i></div>
                         <div class="sg-title">MTF (MARGIN TRADING)</div>
                         <div class="sg-desc">Margin Trading Facility for eligible investors, with appropriate attention
                             to leverage, risk parameters, and disciplined portfolio management.</div>
@@ -410,7 +412,7 @@
                 <!-- Card 1: PRE-IPO -->
                 <div class="spec-card reveal d1">
                     <div>
-                        <div class="spec-badge">🚀 SPECIALIZED INVESTMENT</div>
+                        <div class="spec-badge"><i class="ri-rocket-line"></i> SPECIALIZED INVESTMENT</div>
                         <div class="spec-title">PRE-IPO</div>
                         <div class="spec-subhead">EARLY ACCESS. INFORMED DECISIONS.</div>
 
@@ -467,7 +469,7 @@
                 <!-- Card 2: FUND RAISING -->
                 <div class="spec-card reveal d2">
                     <div>
-                        <div class="spec-badge">🏢 CORPORATE CAPITAL</div>
+                        <div class="spec-badge"><i class="ri-building-line"></i> CORPORATE CAPITAL</div>
                         <div class="spec-title">FUND RAISING</div>
                         <div class="spec-subhead">CAPITAL FOR THE NEXT STAGE OF YOUR BUSINESS.</div>
 
@@ -548,14 +550,14 @@
                                     </svg>
                                 </a>
                                 <a href="tel:+919999999999" class="btn btn-ghost btn-lg">
-                                    <span>📞 Call Us Now</span>
+                                    <span><i class="ri-phone-fill"></i> Call Us Now</span>
                                 </a>
                             </div>
                         </div>
                         <div class="cta-micro-trust reveal d4">
-                            <span>✓ Direct Regional Advisory</span>
-                            <span>✓ SEBI Regulated Ecosystem</span>
-                            <span>✓ Gondal &amp; Rajkot Hubs</span>
+                            <span><i class="ri-check-double-line"></i> Direct Regional Advisory</span>
+                            <span><i class="ri-shield-check-line"></i> SEBI Regulated Ecosystem</span>
+                            <span><i class="ri-map-pin-2-line"></i> Gondal &amp; Rajkot Hubs</span>
                         </div>
                     </div>
 
@@ -709,17 +711,17 @@
 
                         <!-- Regional Hubs -->
                         <div class="footer-locations-inline">
-                            <span>📍</span>
+                            <span><i class="ri-map-pin-line"></i></span>
                             <a href="contact.html#locations">Gondal</a>
                             <span style="color: rgba(74, 154, 224, 0.4);">|</span>
                             <a href="contact.html#locations">Rajkot</a>
                         </div>
 
                         <div class="social-row">
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="soc" title="Twitter/X" aria-label="Twitter">𝕏</a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="soc" title="LinkedIn" aria-label="LinkedIn">in</a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="soc" title="Facebook" aria-label="Facebook">f</a>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="soc" title="YouTube" aria-label="YouTube">▶</a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="soc" title="Twitter/X" aria-label="Twitter"><i class="ri-twitter-x-line"></i></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="soc" title="LinkedIn" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="soc" title="Facebook" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="soc" title="YouTube" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
                         </div>
                     </div>
 
@@ -758,14 +760,14 @@
                     <div class="footer-col">
                         <h4>Connect</h4>
                         <ul class="footer-links">
-                            <li><a href="contact.html#locations">📍 Gondal Desk</a></li>
-                            <li><a href="contact.html#locations">📍 Rajkot Desk</a></li>
-                            <li><a href="tel:+919825219469">📞 +91 98252 19469</a></li>
-                            <li><a href="mailto:info@smitsecurities.com">✉ info@smitsecurities.com</a></li>
-                            <li><a href="contact.html#locations">🕐 Mon–Sat: 9 AM – 6 PM</a></li>
+                            <li><a href="contact.html#locations"><i class="ri-map-pin-line"></i> Gondal Desk</a></li>
+                            <li><a href="contact.html#locations"><i class="ri-map-pin-line"></i> Rajkot Desk</a></li>
+                            <li><a href="tel:+919825219469"><i class="ri-phone-line"></i> +91 98252 19469</a></li>
+                            <li><a href="mailto:info@smitsecurities.com"><i class="ri-mail-line"></i> info@smitsecurities.com</a></li>
+                            <li><a href="contact.html#locations"><i class="ri-time-line"></i> Mon–Sat: 9 AM – 6 PM</a></li>
                         </ul>
                         <div style="margin-top: 18px">
-                            <div class="sebi-chip">🏛️ SEBI Reg: INZ000213837</div>
+                            <div class="sebi-chip"><i class="ri-government-line"></i> SEBI Reg: INZ000213837</div>
                         </div>
                     </div>
 
@@ -778,7 +780,7 @@
                         <a href="about.html">Terms of Use</a> &nbsp;|&nbsp;
                         <a href="about.html">Disclaimer</a>
                     </p>
-                    <p>⚠️ Investments are subject to market risks. Please read all scheme-related documents carefully
+                    <p><i class="ri-alert-line" style="color: #f59e0b; margin-right: 4px;"></i> Investments are subject to market risks. Please read all scheme-related documents carefully
                         before investing.</p>
                 </div>
             </div>
