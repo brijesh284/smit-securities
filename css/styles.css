@@ -8051,4 +8051,1347 @@ i[class^="ri-"], i[class*=" ri-"] {
     line-height: 1;
 }
 
+/* ============================================================
+   QUANTTRIX-STYLE FLOATING STICKY CAPSULE HEADER & 3D SHOWCASE HERO
+   Fully Customized to SMIT Securities Theme & Design System
+============================================================ */
+
+/* 1. Master Floating Sticky Capsule Header */
+/* ============================================================
+   QUANTTRIX-STYLE FLOATING STICKY CAPSULE HEADER (SMIT THEME)
+============================================================ */
+.qt-header-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    padding: 20px 0;
+    transition: padding 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.qt-header-wrap.scrolled {
+    padding: 12px 0;
+    background: rgba(7, 17, 31, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(74, 154, 224, 0.22);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.qt-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+}
+
+.qt-brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.qt-logo-svg {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 8px rgba(32, 116, 176, 0.35));
+    transition: transform 0.3s ease;
+}
+
+.qt-brand-logo:hover .qt-logo-svg {
+    transform: scale(1.06);
+}
+
+.qt-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.qt-logo-title {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.qt-logo-sub {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #38bdf8;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Center Floating Capsule Pill Navigation */
+.qt-nav-capsule {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    background: rgba(8, 22, 48, 0.75);
+    border: 1px solid rgba(74, 154, 224, 0.25);
+    border-radius: 9999px;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.qt-nav-capsule:hover {
+    border-color: rgba(74, 154, 224, 0.4);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+.qt-nav-item {
+    position: relative;
+}
+
+.qt-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.qt-nav-link:hover {
+    color: #ffffff;
+    background: rgba(37, 99, 192, 0.25);
+}
+
+.qt-nav-link.active {
+    color: #ffffff;
+    background: rgba(37, 99, 192, 0.35);
+    border: 1px solid rgba(74, 154, 224, 0.35);
+    font-weight: 700;
+}
+
+/* Right CTA Pill Button */
+.qt-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.qt-btn-get-started {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 20px 6px 8px;
+    background: linear-gradient(135deg, #2074B0 0%, #38BDF8 100%);
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(32, 116, 176, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+.qt-btn-get-started .qt-btn-arrow-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(4, 12, 30, 0.35);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.qt-btn-get-started:hover {
+    transform: translateY(-2px) scale(1.02);
+    background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 100%);
+    box-shadow: 0 8px 24px rgba(32, 116, 176, 0.45);
+    color: #ffffff;
+}
+
+.qt-btn-get-started:hover .qt-btn-arrow-circle {
+    background: #ffffff;
+    color: #1d4ed8;
+    transform: translateX(3px);
+}
+
+/* Mobile Hamburger Button */
+.qt-hamburger-btn {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(10, 26, 58, 0.75);
+    border: 1px solid rgba(74, 154, 224, 0.35);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.qt-hamburger-btn:hover {
+    background: rgba(37, 99, 192, 0.35);
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+/* ============================================================
+   2. HERO SECTION CONTAINER (QUANTTRIX 3D SHOWCASE)
+============================================================ */
+.qt-hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: clip;
+    color: #ffffff;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 1;
+}
+
+.qt-hero-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: clamp(140px, 13vw, 190px) 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Candlestick Dynamic Background Trading Matrix */
+.qt-candlestick-matrix {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    opacity: 0.16;
+    mask-image: radial-gradient(ellipse 95% 80% at 50% 45%, black 25%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse 95% 80% at 50% 45%, black 25%, transparent 95%);
+}
+
+.qt-candle-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: candleBreathe 8s ease-in-out infinite alternate;
+}
+
+.qt-candle-col:nth-child(even) { animation-duration: 9.5s; animation-delay: -2s; }
+.qt-candle-col:nth-child(3n) { animation-duration: 11s; animation-delay: -3.5s; }
+.qt-candle-col:nth-child(4n) { animation-duration: 7.5s; animation-delay: -1.5s; }
+
+@keyframes candleBreathe {
+    0% { transform: translateY(0px) scaleY(1); opacity: 0.55; }
+    50% { transform: translateY(-8px) scaleY(1.03); opacity: 0.85; }
+    100% { transform: translateY(5px) scaleY(0.98); opacity: 0.6; }
+}
+
+.qt-wick {
+    width: 2px;
+    background: linear-gradient(180deg, rgba(74, 154, 224, 0.05), rgba(74, 154, 224, 0.35), rgba(74, 154, 224, 0.05));
+}
+
+.qt-candle-body {
+    width: 22px;
+    border-radius: 4px;
+    background: rgba(30, 80, 180, 0.2);
+    border: 1px solid rgba(74, 154, 224, 0.3);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.15), inset 0 0 8px rgba(56, 189, 248, 0.1);
+    position: relative;
+}
+
+.qt-candle-body.bullish {
+    background: linear-gradient(180deg, rgba(56, 189, 248, 0.28) 0%, rgba(37, 99, 235, 0.15) 100%);
+    border-color: rgba(56, 189, 248, 0.38);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+.qt-candle-body.bullish-alt {
+    background: linear-gradient(180deg, rgba(34, 197, 94, 0.22) 0%, rgba(37, 99, 235, 0.12) 100%);
+    border-color: rgba(34, 197, 94, 0.35);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+}
+
+.qt-candle-body.bearish {
+    background: linear-gradient(180deg, rgba(30, 64, 175, 0.2) 0%, rgba(15, 23, 42, 0.3) 100%);
+    border-color: rgba(74, 154, 224, 0.25);
+}
+
+/* SEBI Registration Eyebrow Badge (Static - Matches SMIT theme) */
+.qt-sebi-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: clamp(5px, 1vw, 7px) clamp(12px, 2vw, 22px);
+    background: rgba(10, 26, 54, 0.75);
+    border: 1px solid rgba(74, 154, 224, 0.38);
+    border-radius: 9999px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-family: var(--font-body);
+    font-size: clamp(11.5px, 1.2vw, 13.5px);
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    margin-bottom: clamp(14px, 2vw, 22px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    position: relative;
+    max-width: 100%;
+    word-break: break-word;
+    text-align: center;
+    justify-content: center;
+}
+
+.qt-sparkle-icon {
+    color: #38bdf8;
+    font-size: 14px;
+    filter: drop-shadow(0 0 6px #38bdf8);
+    flex-shrink: 0;
+}
+
+/* Hero Main Headline */
+.qt-hero-heading {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 5.2vw, 58px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: clamp(14px, 2vw, 22px);
+    max-width: 980px;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    text-wrap: balance;
+}
+
+.qt-hero-heading .gradient-text {
+    background: linear-gradient(130deg, #BAE6FD 0%, #7EC8F0 45%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline;
+}
+
+/* Hero Subtitle */
+.qt-hero-subtext {
+    font-family: var(--font-body);
+    font-size: clamp(14px, 1.6vw, 17px);
+    font-weight: 500;
+    line-height: 1.65;
+    color: rgba(224, 242, 254, 0.85);
+    max-width: 760px;
+    margin: 0 auto clamp(22px, 3vw, 36px);
+    text-wrap: balance;
+}
+
+/* Hero Action Buttons */
+.qt-hero-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: clamp(36px, 5vw, 65px);
+    z-index: 20;
+}
+
+.qt-hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #2074B0 0%, #38BDF8 100%);
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 14.5px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(32, 116, 176, 0.35);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+.qt-hero-btn-primary:hover {
+    transform: translateY(-3px) scale(1.03);
+    background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 100%);
+    box-shadow: 0 10px 28px rgba(32, 116, 176, 0.5);
+    color: #ffffff;
+}
+
+.qt-hero-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: rgba(10, 24, 48, 0.75);
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 14.5px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    border-radius: 9999px;
+    border: 1.5px solid rgba(74, 154, 224, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+}
+
+.qt-hero-btn-secondary:hover {
+    transform: translateY(-3px) scale(1.03);
+    border-color: rgba(56, 189, 248, 0.7);
+    background: rgba(14, 32, 64, 0.95);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    color: #ffffff;
+}
+
+/* ============================================================
+   3. 3D SHOWCASE STAGE
+============================================================ */
+.qt-showcase-stage {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 500px;
+    padding-bottom: 0;
+    z-index: 10;
+}
+
+.qt-cards-mobile-row {
+    display: contents;
+}
+
+/* 3D Tilted Glass Chart Cards */
+.qt-tilt-card {
+    position: absolute;
+    width: 270px;
+    background: linear-gradient(155deg, rgba(14, 30, 60, 0.95) 0%, rgba(7, 18, 38, 0.98) 100%);
+    border: 1.5px solid rgba(74, 154, 224, 0.35);
+    border-radius: 24px;
+    padding: 20px 18px 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    z-index: 8;
+    text-align: left;
+    color: #ffffff;
+    user-select: none;
+    transform-origin: center center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+}
+
+/* Left Tilted Card */
+.qt-card-left {
+    left: 10px;
+    top: 40px;
+    transform: perspective(1000px) rotate(-13deg) rotateY(6deg) rotateX(2deg);
+}
+
+.qt-card-left:hover {
+    transform: perspective(1000px) rotate(-7deg) scale(1.04) translateY(-8px) !important;
+    border-color: rgba(56, 189, 248, 0.6);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 15px rgba(32, 116, 176, 0.2);
+}
+
+/* Right Tilted Card */
+.qt-card-right {
+    right: 10px;
+    top: 40px;
+    transform: perspective(1000px) rotate(13deg) rotateY(-6deg) rotateX(2deg);
+}
+
+.qt-card-right:hover {
+    transform: perspective(1000px) rotate(7deg) scale(1.04) translateY(-8px) !important;
+    border-color: rgba(56, 189, 248, 0.6);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 15px rgba(32, 116, 176, 0.2);
+}
+
+/* Card Header Elements */
+.qt-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.qt-card-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.qt-card-title {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.qt-card-subtitle {
+    font-family: var(--font-body);
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #38bdf8;
+    margin-top: 2px;
+}
+
+.qt-card-action-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(37, 99, 192, 0.25);
+    border: 1px solid rgba(74, 154, 224, 0.4);
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.qt-tilt-card:hover .qt-card-action-btn {
+    background: #2074b0;
+    color: #ffffff;
+    border-color: #38bdf8;
+    transform: scale(1.1);
+}
+
+/* Live Badge for Right Card */
+.qt-live-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(34, 197, 94, 0.18);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    color: #4ade80;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 9999px;
+    margin-top: 4px;
+    width: fit-content;
+}
+
+.qt-live-tag::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 6px #22c55e;
+    animation: livePulse 2s infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Visual Graphic: 3D Bar Chart for Left Card */
+.qt-bar-chart-visual {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 7px;
+    height: 80px;
+    padding: 8px 8px 6px;
+    background: rgba(4, 12, 26, 0.75);
+    border: 1px solid rgba(74, 154, 224, 0.2);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.qt-bar-col {
+    flex: 1;
+    border-radius: 5px 5px 2px 2px;
+    background: linear-gradient(180deg, #38bdf8 0%, #2074b0 100%);
+    box-shadow: 0 4px 10px rgba(32, 116, 176, 0.35);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.qt-bar-col:nth-child(1) { height: 35%; }
+.qt-bar-col:nth-child(2) { height: 55%; }
+.qt-bar-col:nth-child(3) { height: 42%; }
+.qt-bar-col:nth-child(4) { height: 80%; background: linear-gradient(180deg, #60a5fa 0%, #1d4ed8 100%); }
+.qt-bar-col:nth-child(5) { height: 65%; }
+.qt-bar-col:nth-child(6) { height: 95%; background: linear-gradient(180deg, #38bdf8 0%, #1e40af 100%); }
+
+.qt-tilt-card:hover .qt-bar-col {
+    filter: brightness(1.15);
+}
+
+/* Visual Graphic: Area Curve Chart for Right Card */
+.qt-area-chart-visual {
+    height: 80px;
+    width: 100%;
+    background: rgba(4, 12, 26, 0.75);
+    border: 1px solid rgba(74, 154, 224, 0.2);
+    border-radius: 12px;
+    padding: 6px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.qt-area-chart-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Card Footer Notes */
+.qt-card-footer {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    line-height: 1.4;
+}
+
+/* ============================================================
+   4. CENTRAL SMARTPHONE DEVICE
+============================================================ */
+.qt-phone-peek-wrap {
+    position: relative;
+    z-index: 12;
+    width: 330px;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+.qt-phone-frame {
+    width: 100%;
+    height: 460px;
+    background: #030814;
+    border-radius: 44px 44px 0 0;
+    border: 7px solid #162b50;
+    border-bottom: none;
+    box-shadow: 0 -25px 70px rgba(0, 0, 0, 0.85), 0 0 45px rgba(37, 99, 192, 0.35), inset 0 0 0 1px rgba(74, 154, 224, 0.25);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-clip: padding-box;
+}
+
+/* Dynamic Island */
+.qt-phone-island {
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92px;
+    height: 22px;
+    background: #000000;
+    border-radius: 20px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.qt-island-lens {
+    width: 8px;
+    height: 8px;
+    background: #111827;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px rgba(56, 189, 248, 0.6);
+}
+
+.qt-island-mic {
+    width: 5px;
+    height: 5px;
+    background: #1f2937;
+    border-radius: 50%;
+}
+
+/* In-Phone Screen Interface */
+.qt-phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #061124;
+    background-image: radial-gradient(circle at 50% 0%, rgba(37, 99, 192, 0.35) 0%, transparent 65%);
+    display: flex;
+    flex-direction: column;
+    padding: 38px 14px 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.qt-phone-status-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.qt-phone-status-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+}
+
+/* Phone Top App Bar */
+.qt-app-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 4px 12px;
+}
+
+.qt-app-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qt-app-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2074B0, #38BDF8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    flex-shrink: 0;
+}
+
+.qt-join-tag {
+    background: rgba(37, 99, 192, 0.25);
+    border: 1px solid rgba(74, 154, 224, 0.35);
+    padding: 3px 9px;
+    border-radius: 9999px;
+    font-size: 10.5px;
+    font-weight: 800;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.qt-app-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+/* Main Plan Card Inside Smartphone */
+.qt-app-card {
+    background: linear-gradient(160deg, rgba(15, 34, 68, 0.96) 0%, rgba(7, 18, 40, 0.98) 100%);
+    border: 1px solid rgba(74, 154, 224, 0.35);
+    border-radius: 20px;
+    padding: 16px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.qt-plan-eyebrow {
+    display: inline-block;
+    background: rgba(37, 99, 192, 0.25);
+    color: #7ec8f0;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 9px;
+    border-radius: 9999px;
+    width: fit-content;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border: 1px solid rgba(74, 154, 224, 0.3);
+}
+
+.qt-plan-title {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.qt-plan-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.qt-risk-tag {
+    background: rgba(245, 158, 11, 0.18);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    color: #fbbf24;
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.qt-reco-tag {
+    background: rgba(37, 99, 192, 0.25);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.qt-plan-metric-box {
+    background: rgba(4, 12, 26, 0.75);
+    border: 1px solid rgba(74, 154, 224, 0.25);
+    border-radius: 10px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.qt-pm-label {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+.qt-pm-val {
+    font-size: 12.5px;
+    font-weight: 900;
+    color: #38bdf8;
+    font-family: var(--font-display);
+}
+
+.qt-plan-apply-btn {
+    background: linear-gradient(135deg, #2074B0 0%, #38BDF8 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    padding: 10px 0;
+    font-family: var(--font-display);
+    font-size: 12.5px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(32, 116, 176, 0.3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+    width: 100%;
+}
+
+.qt-plan-apply-btn:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 100%);
+    box-shadow: 0 6px 18px rgba(32, 116, 176, 0.45);
+    transform: scale(1.02);
+    color: #ffffff;
+}
+
+/* ============================================================
+   5. CURVED POINTER BADGES
+============================================================ */
+.qt-pointer-badge {
+    position: absolute;
+    z-index: 25;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: auto;
+}
+
+.qt-pointer-left {
+    left: -170px;
+    top: 270px;
+}
+
+.qt-pointer-right {
+    right: -140px;
+    top: 220px;
+}
+
+.qt-pointer-chip {
+    background: rgba(8, 22, 50, 0.92);
+    border: 1px solid rgba(74, 154, 224, 0.4);
+    padding: 7px 16px;
+    border-radius: 9999px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    white-space: nowrap;
+}
+
+.qt-pointer-arrow-svg {
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(0 2px 4px rgba(56, 189, 248, 0.4));
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES FOR ALL SCREEN BREAKPOINTS
+============================================================ */
+
+/* 1. Laptops & Small Desktops (1025px - 1200px) */
+@media (max-width: 1200px) {
+    .qt-hero-container {
+        padding: clamp(130px, 12vw, 160px) 20px 0;
+    }
+
+    .qt-card-left {
+        left: -10px;
+        width: 230px;
+        top: 60px;
+        transform: perspective(1000px) rotate(-9deg) scale(0.92);
+    }
+
+    .qt-card-right {
+        right: -10px;
+        width: 230px;
+        top: 60px;
+        transform: perspective(1000px) rotate(9deg) scale(0.92);
+    }
+
+    .qt-pointer-left {
+        left: -70px;
+        top: 220px;
+        transform: scale(0.9);
+    }
+
+    .qt-pointer-right {
+        right: -70px;
+        top: 190px;
+        transform: scale(0.9);
+    }
+
+    .qt-phone-peek-wrap {
+        width: 300px;
+    }
+
+    .qt-phone-frame {
+        height: 430px;
+    }
+}
+
+/* 2. Tablet Landscape & Intermediate (861px - 1024px) */
+@media (max-width: 1024px) {
+    .qt-nav-capsule {
+        display: none !important;
+    }
+
+    /* Remove Get Started button in responsive mode across all pages */
+    .qt-btn-get-started {
+        display: none !important;
+    }
+
+    .qt-hamburger-btn {
+        display: flex;
+    }
+
+    /* Responsive Logo & Text Size Reduction */
+    .qt-brand-logo {
+        gap: 10px;
+    }
+
+    .qt-logo-svg {
+        width: 38px;
+        height: 38px;
+    }
+
+    .qt-logo-title {
+        font-size: 16px;
+        letter-spacing: 0.6px;
+    }
+
+    .qt-logo-sub {
+        font-size: 8.5px;
+        letter-spacing: 1.2px;
+    }
+
+    .qt-hero-container {
+        padding: 125px 20px 0;
+    }
+
+    .qt-candlestick-matrix .qt-candle-col:nth-child(1),
+    .qt-candlestick-matrix .qt-candle-col:nth-child(2),
+    .qt-candlestick-matrix .qt-candle-col:nth-child(11),
+    .qt-candlestick-matrix .qt-candle-col:nth-child(12) {
+        display: none;
+    }
+
+    .qt-card-left {
+        left: 0px;
+        width: 215px;
+        top: 70px;
+        transform: perspective(1000px) rotate(-7deg) scale(0.88);
+    }
+
+    .qt-card-right {
+        right: 0px;
+        width: 215px;
+        top: 70px;
+        transform: perspective(1000px) rotate(7deg) scale(0.88);
+    }
+
+    .qt-pointer-left {
+        left: -35px;
+        top: 220px;
+        transform: scale(0.8);
+    }
+
+    .qt-pointer-right {
+        right: -35px;
+        top: 190px;
+        transform: scale(0.8);
+    }
+}
+
+/* 3. Tablet Portrait & Phablets (576px - 860px) */
+@media (max-width: 860px) {
+    .qt-header-wrap {
+        padding: 14px 0;
+    }
+
+    .qt-header-wrap.scrolled {
+        padding: 10px 0;
+    }
+
+    .qt-brand-logo {
+        gap: 8px;
+    }
+
+    .qt-logo-svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .qt-logo-title {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .qt-logo-sub {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .qt-hamburger-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .qt-hero-container {
+        padding: 115px 16px 0;
+    }
+
+    .qt-hero-heading {
+        font-size: clamp(30px, 6vw, 42px);
+    }
+
+    .qt-hero-subtext {
+        font-size: 14.5px;
+        margin-bottom: 28px;
+    }
+
+    .qt-hero-btn-group {
+        margin-bottom: 36px;
+    }
+
+    /* Remove side cards and pointers on mobile/tablet */
+    .qt-cards-mobile-row,
+    .qt-tilt-card,
+    .qt-pointer-badge {
+        display: none !important;
+    }
+
+    .qt-showcase-stage {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        min-height: auto;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .qt-phone-peek-wrap {
+        width: min(320px, 88vw);
+        margin: 0 auto;
+    }
+
+    .qt-phone-frame {
+        height: 420px;
+    }
+}
+
+/* 4. Standard Mobile (<= 575px) */
+@media (max-width: 575px) {
+    .qt-header-wrap {
+        padding: 12px 0;
+    }
+
+    .qt-header-wrap.scrolled {
+        padding: 8px 0;
+    }
+
+    .qt-header-container {
+        gap: 8px;
+    }
+
+    /* Clean Compact Logo & Text on Mobile */
+    .qt-brand-logo {
+        gap: 7px;
+    }
+
+    .qt-logo-svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .qt-logo-title {
+        font-size: 13.5px;
+        font-weight: 800;
+        letter-spacing: 0.4px;
+    }
+
+    .qt-logo-sub {
+        font-size: 7.2px;
+        letter-spacing: 0.8px;
+    }
+
+    .qt-hamburger-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .qt-hero-container {
+        padding: 95px 14px 0;
+    }
+
+    .qt-candlestick-matrix {
+        opacity: 0.1;
+    }
+
+    .qt-candlestick-matrix .qt-candle-col:nth-child(3),
+    .qt-candlestick-matrix .qt-candle-col:nth-child(4),
+    .qt-candlestick-matrix .qt-candle-col:nth-child(9),
+    .qt-candlestick-matrix .qt-candle-col:nth-child(10) {
+        display: none;
+    }
+
+    .qt-sebi-pill-badge {
+        font-size: 11px;
+        padding: 5px 12px;
+        line-height: 1.35;
+        margin-bottom: 14px;
+    }
+
+    .qt-hero-heading {
+        font-size: clamp(25px, 7.5vw, 34px);
+        line-height: 1.16;
+        margin-bottom: 12px;
+    }
+
+    .qt-hero-subtext {
+        font-size: 13.5px;
+        line-height: 1.55;
+        margin-bottom: 22px;
+    }
+
+    .qt-hero-btn-group {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        gap: 10px;
+        margin-bottom: 28px;
+    }
+
+    .qt-hero-btn-primary, .qt-hero-btn-secondary {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* Remove side cards on mobile */
+    .qt-cards-mobile-row,
+    .qt-tilt-card,
+    .qt-pointer-badge {
+        display: none !important;
+    }
+
+    .qt-showcase-stage {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        min-height: auto;
+        width: 100%;
+        margin-top: 14px;
+    }
+
+    .qt-phone-peek-wrap {
+        width: min(290px, 92vw);
+        margin: 0 auto;
+    }
+
+    .qt-phone-frame {
+        height: 380px;
+        border-width: 6px;
+        border-radius: 36px 36px 0 0;
+    }
+
+    .qt-phone-screen {
+        padding: 34px 12px 10px;
+    }
+
+    .qt-phone-island {
+        width: 82px;
+        height: 20px;
+        top: 7px;
+    }
+
+    .qt-app-card {
+        padding: 14px 12px;
+        border-radius: 18px;
+    }
+
+    .qt-plan-title {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .qt-plan-metric-box {
+        padding: 8px 10px;
+        margin-bottom: 10px;
+    }
+
+    .qt-plan-apply-btn {
+        padding: 10px 0;
+        font-size: 12.5px;
+    }
+}
+
+/* 5. Extra Small Mobile (<= 400px) */
+@media (max-width: 400px) {
+    .qt-brand-logo {
+        gap: 6px;
+    }
+
+    .qt-logo-svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .qt-logo-title {
+        font-size: 12px;
+        letter-spacing: 0.3px;
+    }
+
+    .qt-logo-sub {
+        font-size: 6.5px;
+        letter-spacing: 0.6px;
+    }
+
+    .qt-hamburger-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+
+    .qt-hero-container {
+        padding: 88px 10px 0;
+    }
+
+    .qt-phone-peek-wrap {
+        width: 265px;
+    }
+
+    .qt-phone-frame {
+        height: 350px;
+    }
+}
+
+
+
+
 

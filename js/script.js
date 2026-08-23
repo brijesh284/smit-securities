@@ -15,7 +15,9 @@
 /* NAVBAR SCROLL EFFECT: Apply styling when page is scrolled */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+    const qtHeader = document.querySelector('.qt-header-wrap');
+    if (qtHeader) qtHeader.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
 
