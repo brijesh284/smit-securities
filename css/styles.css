@@ -1337,13 +1337,13 @@ video {
 .equity-portfolio-ecosystem {
     position: relative;
     width: 100%;
-    max-width: 540px;
-    min-height: 600px;
+    max-width: 520px;
+    min-height: 580px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding-top: 30px;
+    padding: 20px 0;
 }
 
 /* 1. Concentric Circular Radar Orbit Rings */
@@ -1373,15 +1373,15 @@ video {
 }
 
 .eq-orbit-ring-2 {
-    width: 440px;
-    height: 440px;
+    width: 430px;
+    height: 430px;
     border-color: rgba(74, 154, 224, 0.20);
     animation: eqRotateOrbitReverse 60s linear infinite;
 }
 
 .eq-orbit-ring-3 {
-    width: 530px;
-    height: 530px;
+    width: 510px;
+    height: 510px;
     border-color: rgba(74, 154, 224, 0.12);
     animation: eqRotateOrbit 80s linear infinite;
 }
@@ -1463,33 +1463,33 @@ video {
 
 /* Positions & Floating Animations */
 .eq-orbit-ipo {
-    top: -10px;
+    top: -6px;
     left: 50%;
     transform: translateX(-50%);
     animation: eqFloatIpo 5s ease-in-out infinite;
 }
 
 .eq-orbit-trading {
-    top: 22%;
-    left: -4%;
+    top: 20%;
+    left: 0%;
     animation: eqFloatTrading 6s ease-in-out infinite 0.5s;
 }
 
 .eq-orbit-wealth {
-    top: 22%;
-    right: -4%;
+    top: 20%;
+    right: 0%;
     animation: eqFloatWealth 6.2s ease-in-out infinite 0.8s;
 }
 
 .eq-orbit-mf {
-    bottom: 10%;
-    left: -4%;
+    bottom: 12%;
+    left: 0%;
     animation: eqFloatMf 5.5s ease-in-out infinite 1.2s;
 }
 
 .eq-orbit-advisory {
-    bottom: 10%;
-    right: -4%;
+    bottom: 12%;
+    right: 0%;
     animation: eqFloatAdvisory 5.8s ease-in-out infinite 1.5s;
 }
 
@@ -1522,7 +1522,7 @@ video {
 .eq-phone-device-wrap {
     position: relative;
     z-index: 5;
-    margin-top: 24px;
+    margin-top: 18px;
     animation: eqFloatPhone 6s ease-in-out infinite;
 }
 
@@ -1532,13 +1532,13 @@ video {
 }
 
 .eq-phone-chassis {
-    width: 270px;
-    max-width: 85vw;
+    width: 272px;
+    max-width: 100%;
     height: 520px;
     background: #020617;
-    border-radius: 40px;
-    border: 8px solid #1e293b;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), 0 0 45px rgba(37, 99, 192, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+    border-radius: 38px;
+    border: 7px solid #1e293b;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 45px rgba(37, 99, 192, 0.35), inset 0 0 0 2px rgba(255, 255, 255, 0.15);
     position: relative;
     overflow: hidden;
     display: flex;
@@ -1550,8 +1550,8 @@ video {
     top: 8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 82px;
-    height: 18px;
+    width: 80px;
+    height: 17px;
     background: #090e17;
     border-radius: 20px;
     z-index: 20;
@@ -1570,7 +1570,7 @@ video {
 }
 
 .eq-phone-speaker {
-    width: 28px;
+    width: 26px;
     height: 3.5px;
     border-radius: 4px;
     background: #1e293b;
@@ -1580,7 +1580,7 @@ video {
     flex: 1;
     background: #ffffff;
     color: #0f172a;
-    padding: 32px 10px 10px;
+    padding: 30px 10px 10px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -1598,7 +1598,7 @@ video {
 
 .eq-app-title {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 800;
     color: #0f172a;
     letter-spacing: -0.2px;
@@ -1632,13 +1632,14 @@ video {
     padding: 8px 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px 10px;
+    gap: 6px 8px;
     margin-bottom: 8px;
 }
 
 .eq-pm-col {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .eq-pm-col.text-right {
@@ -1647,11 +1648,12 @@ video {
 }
 
 .eq-pm-lbl {
-    font-size: 9.5px;
-    font-weight: 600;
+    font-size: 9px;
+    font-weight: 700;
     color: #64748b;
     text-transform: uppercase;
     letter-spacing: 0.2px;
+    margin-bottom: 1px;
 }
 
 .eq-pm-val {
@@ -1659,6 +1661,7 @@ video {
     font-weight: 800;
     color: #0f172a;
     font-family: var(--font-display);
+    white-space: nowrap;
 }
 
 .eq-pm-val.text-green {
@@ -1666,8 +1669,9 @@ video {
 }
 
 .eq-pm-val small {
-    font-size: 9.5px;
+    font-size: 9px;
     font-weight: 700;
+    display: inline-block;
 }
 
 .eq-portfolio-tabs {
@@ -1687,6 +1691,7 @@ video {
     cursor: pointer;
     position: relative;
     transition: all 0.2s ease;
+    text-align: center;
 }
 
 .eq-p-tab.active {
@@ -1711,7 +1716,7 @@ video {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 10.5px;
+    font-size: 10px;
     color: #94a3b8;
     margin-bottom: 6px;
 }
@@ -1729,6 +1734,7 @@ video {
     flex-direction: column;
     gap: 5px;
     padding-right: 2px;
+    -webkit-overflow-scrolling: touch;
 }
 
 .eq-holdings-list::-webkit-scrollbar {
@@ -1749,6 +1755,7 @@ video {
     border: 1px solid #f1f5f9;
     border-radius: 8px;
     transition: background 0.2s ease;
+    gap: 4px;
 }
 
 .eq-holding-row:hover {
@@ -1759,6 +1766,8 @@ video {
 .eq-hr-left {
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    flex: 1.1;
 }
 
 .eq-hr-symbol {
@@ -1766,24 +1775,37 @@ video {
     font-weight: 800;
     color: #0f172a;
     font-family: var(--font-display);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .eq-hr-sub {
-    font-size: 9.5px;
+    font-size: 9px;
     color: #64748b;
+    white-space: nowrap;
 }
 
 .eq-hr-sub strong {
     color: #334155;
 }
 
+.eq-hr-mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
 .eq-hr-qty-badge {
-    background: #e2e8f0;
-    border-radius: 3px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
     padding: 1.5px 5px;
-    font-size: 9px;
+    font-size: 8.5px;
     color: #475569;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .eq-hr-qty-badge strong {
@@ -1796,16 +1818,19 @@ video {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    flex-shrink: 0;
 }
 
 .eq-hr-profit {
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 800;
+    white-space: nowrap;
 }
 
 .eq-hr-ltp {
-    font-size: 9px;
+    font-size: 8.5px;
     color: #64748b;
+    white-space: nowrap;
 }
 
 .eq-hr-ltp strong {
@@ -1813,7 +1838,7 @@ video {
 }
 
 .eq-phone-home-indicator {
-    width: 90px;
+    width: 80px;
     height: 3.5px;
     background: #cbd5e1;
     border-radius: 4px;
@@ -1826,6 +1851,7 @@ video {
     left: 50%;
     transform: translateX(-50%);
     width: 200px;
+    max-width: 85%;
     height: 20px;
     background: radial-gradient(ellipse, rgba(56, 189, 248, 0.45) 0%, rgba(37, 99, 192, 0.2) 40%, transparent 70%);
     border-radius: 50%;
@@ -1837,41 +1863,120 @@ video {
 /* Responsive Rules for Equity Portfolio Ecosystem */
 @media (max-width: 991px) {
     .equity-portfolio-ecosystem {
-        margin-bottom: 24px;
+        min-height: auto;
+        padding: 16px 0;
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .equity-portfolio-ecosystem {
-        min-height: auto;
-        flex-direction: column;
-        padding-bottom: 10px;
+        min-height: auto !important;
+        padding: 10px 0 !important;
+        margin: 0 auto 16px auto !important;
+        max-width: 300px !important;
     }
 
+    /* Hide orbiting cards and rings completely on mobile as requested */
     .eq-orbit-card {
-        position: static !important;
-        transform: none !important;
-        animation: none !important;
-        width: calc(50% - 6px);
-        box-sizing: border-box;
-        padding: 10px 8px;
-    }
-
-    .eq-orbit-cards-mobile-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        width: 100%;
-        margin-top: 18px;
-        justify-content: center;
-    }
-
-    .eq-orbit-ipo {
-        width: 100% !important;
+        display: none !important;
     }
 
     .eq-orbit-system {
         display: none !important;
+    }
+
+    .eq-phone-device-wrap {
+        margin-top: 0 !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        animation: none !important;
+    }
+
+    .eq-phone-chassis {
+        width: 100% !important;
+        max-width: 276px !important;
+        height: 500px !important;
+        border-radius: 32px !important;
+        border: 6px solid #1e293b !important;
+    }
+
+    .eq-phone-screen {
+        padding: 28px 8px 8px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .eq-phone-chassis {
+        max-width: 265px !important;
+        height: 480px !important;
+        border-radius: 28px !important;
+        border: 5px solid #1e293b !important;
+    }
+
+    .eq-phone-notch {
+        width: 72px !important;
+        height: 15px !important;
+        top: 6px !important;
+    }
+
+    .eq-phone-screen {
+        padding: 26px 7px 7px !important;
+    }
+
+    .eq-portfolio-metrics {
+        padding: 6px 7px !important;
+        gap: 5px 6px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .eq-pm-lbl {
+        font-size: 8.5px !important;
+    }
+
+    .eq-pm-val {
+        font-size: 11px !important;
+    }
+
+    .eq-pm-val small {
+        font-size: 8px !important;
+    }
+
+    .eq-p-tab {
+        font-size: 10px !important;
+        padding: 5px 0 !important;
+    }
+
+    .eq-app-search-bar {
+        font-size: 9.5px !important;
+        padding: 4px 6px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .eq-holding-row {
+        padding: 5px 6px !important;
+    }
+
+    .eq-hr-symbol {
+        font-size: 10px !important;
+    }
+
+    .eq-hr-sub {
+        font-size: 8.5px !important;
+    }
+
+    .eq-hr-qty-badge {
+        font-size: 8px !important;
+        padding: 1px 4px !important;
+    }
+
+    .eq-hr-profit {
+        font-size: 9px !important;
+    }
+
+    .eq-hr-ltp {
+        font-size: 8px !important;
     }
 }
 
