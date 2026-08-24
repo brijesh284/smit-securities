@@ -6802,7 +6802,7 @@ footer .container {
 
 .discipline-word {
     font-family: var(--font-display);
-    font-size: clamp(38px, 5vw, 56px);
+    font-size: clamp(38px, 5vw, 42px);
     font-weight: 900;
     background: linear-gradient(130deg, #BAE6FD 0%, #7EC8F0 50%, #3B82F6 100%);
     -webkit-background-clip: text;
